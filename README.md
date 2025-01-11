@@ -1,48 +1,46 @@
-# Astro Starter Kit: Basics
+# CougarCS-Home
 
-```sh
-npm create astro@latest -- --template basics
-```
+> CougarCS is the largest student-run Computer Science organization at the University of Houston. At CougarCS, our mission is to smoothly transition our inexperienced members into young professionals by the end of their degree and to provide support and assistance to members who struggle academically or who need career guidance.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
+The new homepage for cougarcs.com :)
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Built using [Astro](https://astro.build/) + native, standards-based CSS (and sometimes CSS modules) for future maintainability (relying too heavily on Tailwind was hurting development efforts)
 
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
+React is used sparingly for more interactive portions.
 
-## 🚀 Project Structure
+Made to (as closely as reasonably possible) match the [Figma design](https://www.figma.com/design/s2fUgiFpoXGBSOX5feNLhQ/Website-Re-design---CougarCS?node-id=59-69&t=rHa4uCF3jIwNY47A-1)
 
-Inside of your Astro project, you'll see the following folders and files:
+## NOTE:
 
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
+This isn't deployed yet. In the coming days it'll be deployed on a subdomain on cougarcs.com, and then eventually the main site will migrate over to it.
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Run this locally!
 
-## 🧞 Commands
+We use [Astro](https://astro.build/) as our framework so the code is close to web-native, clean, and easy to build upon in the future. To try the site out on your machine:
 
-All commands are run from the root of the project, from a terminal:
+1. Clone the repository:
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+   ```sh
+   git clone https://github.com/yourusername/CougarCS-Home.git
+   ```
 
-## 👀 Want to learn more?
+2. Navigate to the project directory:
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+   ```sh
+   cd CougarCS-Home
+   ```
+
+3. Install the dependencies [(we try to have very few!)](https://github.com/CougarCS/CougarCS-Home/blob/main/package.json):
+
+   ```sh
+   npm install
+   ```
+
+4. Start the dev server:
+
+   ```sh
+   npx astro dev
+   ```
+
+5. Your terminal should tell you the URL the dev site is active on.
+   > this should be http://localhost:4321/
