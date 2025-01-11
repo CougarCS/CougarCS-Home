@@ -1,0 +1,79 @@
+---
+import { Icon } from "astro-icon/components";
+import SectionIconHeading from "./SectionIconHeading.astro";
+---
+
+<div class="about-us">
+  <img
+    class="about-us-image"
+    src="/about-us-image.png"
+    srcset="/about-us-image-small.png 600w, /about-us-image.png 1200w"
+    sizes="(max-width: 600px) 600px, 1200px"
+    alt="A collage of people collaborating, attending presentations, and socializing, framed with colorful borders and geometric shapes."
+  />
+
+  <div>
+    <div class="about-us-header">
+      <SectionIconHeading text="About Us">
+        <img
+          style="padding: 8px; width: 70%; background-color: white;"
+          src="/cougarLogo.svg"
+          alt="Logo"
+        />
+      </SectionIconHeading>
+    </div>
+
+    <p class="about-us-text">
+      We are a club committed to helping our members <span class="highlighted"
+        >transform <Icon class="highlighted-icon" name="mdi:arrow-up-bold" /></span
+      > from novices to professionals by <span class="highlighted"
+        >graduation <Icon class="highlighted-icon" name="mdi:graduation-cap" /></span
+      > while providing academic <span class="highlighted"
+        >support <Icon class="highlighted-icon" name="mdi:handshake" /></span
+      >
+    </p>
+  </div>
+</div>
+
+<style>
+  .about-us {
+    padding: 3rem 0;
+    text-align: center;
+    background-color: #f1f5f7;
+
+    .about-us-image {
+      width: 80%;
+      height: auto;
+      margin: auto 0;
+    }
+
+    .about-us-header {
+      margin: 2rem auto;
+      max-width: fit-content;
+    }
+
+    .about-us-text {
+      padding: 0 2rem;
+      margin: 0 auto;
+      max-width: 500px;
+      font-size: larger;
+
+      .highlighted {
+        padding-right: 5px;
+        display: inline-flex;
+        gap: 3px;
+        align-items: center;
+        font-weight: bold;
+        color: var(--cougarcs-cougar-red);
+
+        .highlighted-icon {
+          font-size: 1.5rem;
+        }
+      }
+
+      .highlighted:first-of-type .highlighted-icon {
+        transform: scale(1.25);
+      }
+    }
+  }
+</style>

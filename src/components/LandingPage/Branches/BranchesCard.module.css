@@ -1,0 +1,72 @@
+.card {
+  display: flex;
+  flex-direction: column;
+
+  width: 16rem;
+  min-width: 14rem;
+  aspect-ratio: 3/4;
+
+  padding: 2rem;
+
+  border: 2px solid #cccdce;
+  background-color: white;
+  border-top-left-radius: 0.4rem;
+  border-top-right-radius: 0.4rem;
+  border-bottom: 4px solid var(--card-color);
+
+  h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 0.9rem;
+    margin: 0;
+
+    line-height: 1.8;
+  }
+
+  ul {
+    margin-left: 0;
+    padding-left: 0;
+  }
+
+  a {
+    margin-top: auto;
+    color: var(--card-color);
+  }
+
+  @media (max-width: 768px) {
+    aspect-ratio: 4/3;
+  }
+}
+
+.activity {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 0.75rem;
+
+  div {
+    width: 2rem;
+    max-height: 100%;
+    aspect-ratio: 1/1;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--icon-color);
+    border-radius: 0.5rem;
+
+    svg {
+      font-size: x-large;
+      color: white;
+    }
+  }
+
+  span {
+    font-size: smaller;
+  }
+}

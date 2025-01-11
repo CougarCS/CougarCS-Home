@@ -1,0 +1,64 @@
+---
+const { number, description } = Astro.props;
+---
+
+<div class="stat">
+  <span class="stat-focus">{number} <span class="plus">+</span></span>
+  <p class="description">{description}</p>
+</div>
+
+<style>
+  .stat {
+    display: flex;
+    gap: .1rem;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+    font-size: x-large;
+    font-family: "Chakra Petch", sans-serif;
+    color: white;
+    font-weight: 400;
+    font-size: 1.25rem;
+
+    /* Large/desktop */
+    @media (min-width: 1024px) {
+      flex-direction: row;
+      gap: 2rem;
+      
+      text-align: left;
+    }
+
+    .description {
+      margin: 0;
+
+      width: fit-content;
+      max-width: 200px;
+      min-width: 200px;
+
+      font-size: 1.15rem;
+      font-weight: 400;
+    }
+
+    .stat-focus {
+      display: flex;
+      gap: 5px;
+      align-items: center;
+
+      font-weight: 600;
+      font-size: 3rem;
+
+      /* the plus */
+      .plus {
+        position: relative;
+        top: -0.25rem;
+        line-height: 0px;
+
+        color: var(--cougarcs-cougar-red);
+        font-size: 3.5rem;
+        font-weight: 700;
+      }
+    }
+  }
+</style>

@@ -1,0 +1,92 @@
+---
+import CougarCSLogo from "./CougarCSLogo.astro";
+import { Icon } from "astro-icon/components";
+---
+
+<div class="navbar">
+  <div class="navbar-main">
+    <a href="/">
+      <CougarCSLogo />
+    </a>
+
+    <button class="menu-toggle">
+      <Icon class="menu-toggle-icon" name="mdi:menu" />
+    </button>
+  </div>
+
+  <nav class="navbar-menu">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+  </nav>
+</div>
+
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const menu = document.querySelector(".navbar-menu");
+
+  if (menuToggle && menu) {
+    menuToggle.addEventListener("click", () => {
+      console.log("clicked");
+      menu.classList.toggle("show");
+    });
+  }
+</script>
+
+<style>
+  .navbar {
+    position: sticky;
+    top: 0;
+
+    .navbar-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.25rem 1.75rem;
+      background-color: #333;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    /* hamburger button */
+    .menu-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      padding: 0.5rem;
+
+      .menu-toggle-icon {
+        color: #fff;
+        transform: scale(2.5);
+      }
+    }
+
+    /* menu */
+    .navbar-menu {
+      display: none;
+      width: 100%;
+      background-color: #fff;
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+      &.show {
+        display: block;
+      }
+
+      a {
+        display: block;
+        padding: 10px;
+        border-bottom: 1px solid #eee;
+        text-decoration: none;
+        color: #333;
+
+        &:hover {
+          background-color: #f9f9f9;
+        }
+      }
+    }
+  }
+</style>

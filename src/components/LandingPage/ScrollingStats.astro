@@ -1,0 +1,26 @@
+---
+import ScrollingStatsSingular from "./ScrollingStatsSingular.astro";
+---
+
+<div class="scrolling-stats-container">
+  <div class="scrolling-stats">
+    <ScrollingStatsSingular number="1500" description="Total members on Discord" />
+    <ScrollingStatsSingular number="900" description="Daily views on all socials" />
+    <ScrollingStatsSingular number="100" description="Alumni landing FAANG positions" />
+  </div>
+</div>
+
+<style>
+  .scrolling-stats-container {
+    padding: 2rem 2.5rem;
+    background-color: var(--cougarcs-neutral-grey);
+
+    .scrolling-stats {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  }
+</style>

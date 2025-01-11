@@ -1,0 +1,94 @@
+---
+
+---
+
+<div class="hero">
+  <div class="hero-content">
+    <img src="/cougarCSText.svg" alt="CougarCS" class="logo" />
+    <div class="tagline">
+      WE COMPUTE STUDENT <span style="font-weight: 600;">SUCCESS.</span>
+    </div>
+    <button class="btn primary"> Become a Member </button>
+    <button class="btn secondary"> Join our Discord </button>
+  </div>
+</div>
+
+<style>
+  .hero {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 100%;
+
+    background-color: var(--cougarcs-cougar-red);
+    background-image: url("/background/herobackgroundmobile.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    /* a bunch of trial and error led me to this calc,
+    looks good + scales well. */
+    background-position: center top calc(1.5rem - 40vw);
+    padding: 10rem 0;
+  }
+
+  .hero-content {
+    position: relative;
+    top: 15rem;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    background-image: linear-gradient(to top, #c80f2e 60%, transparent);
+
+    .logo {
+      width: 100%;
+      max-width: 18rem;
+      margin: 0 auto;
+    }
+
+    .tagline {
+      font-size: 1.2rem;
+      line-height: 22px;
+      text-align: center;
+      color: white;
+    }
+
+    .btn {
+      text-align: center;
+      font-size: 16px;
+      font-weight: bold;
+      line-height: 22px;
+      padding: 0.5rem 1rem;
+      border: 2px solid white;
+      border-radius: 0.25rem;
+      cursor: pointer;
+
+      &.primary {
+        background-color: white;
+        color: #c80f2e;
+      }
+
+      &.secondary {
+        background-color: transparent;
+        color: white;
+      }
+    }
+  }
+
+  /* Large/desktop */
+  @media (min-width: 1024px) {
+    .hero {
+      flex-direction: row;
+      justify-content: flex-start;
+      background-image: url("/background/herobackground.png");
+      background-position: right;
+    }
+
+    .hero-content {
+      position: static;
+      padding: 4rem 8rem;
+      background-image: none;
+    }
+  }
+</style>
