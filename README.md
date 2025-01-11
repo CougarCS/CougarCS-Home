@@ -4,6 +4,8 @@
 
 The new homepage for cougarcs.com :)
 
+![CougarCS-Home](./public/readme-image.png)
+
 Built using [Astro](https://astro.build/) + native, standards-based CSS (and sometimes CSS modules) for future maintainability (relying too heavily on Tailwind was hurting development efforts)
 
 React is used sparingly for more interactive portions.
