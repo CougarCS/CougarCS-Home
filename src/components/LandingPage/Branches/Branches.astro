@@ -1,14 +1,57 @@
 ---
+import { Icon } from "astro-icon/components";
+import SectionIconHeading from "../SectionIconHeading.astro";
 import BranchesTabber from "./BranchesTabber.jsx";
 ---
 
 <div class="branches">
+  <div class="branches-header">
+    <SectionIconHeading text="Branches">
+      <Icon
+        style="color: var(--cougarcs-cougar-red); background-color: #f1f5f7; padding: 2px;"
+        name="mdi:flowchart"
+      />
+    </SectionIconHeading>
+  </div>
+
+  <div class="what-we-offer-text">
+    <p>Explore our three branches</p>
+    <p>Learn about the branches of CougarCS that power what we do.</p>
+  </div>
+
   <BranchesTabber client:load />
 </div>
 
 <style>
   .branches {
-    padding: 2rem;
+    padding: 4rem 0;
     background-color: #f1f5f7;
+
+    .branches-header {
+      margin: 0 auto;
+      max-width: fit-content;
+      text-align: center;
+    }
+
+    .what-we-offer-text {
+      margin: 1.25rem 0.5rem;
+      padding: 0 2rem;
+      text-align: center;
+
+      p:first-of-type {
+        margin: 0.5rem 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+
+        color: var(--cougarcs-cougar-red);
+      }
+
+      p:last-of-type {
+        margin: 0;
+        font-size: 1.1rem;
+
+        color: var(--cougarcs-neutral-grey);
+      }
+    }
   }
 </style>

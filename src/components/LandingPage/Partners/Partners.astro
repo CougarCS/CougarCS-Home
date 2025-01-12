@@ -1,0 +1,127 @@
+---
+// credits to Brandon for doing this bit
+// https://github.com/BvChung 🐐
+
+type Partners = {
+  name: string;
+  websiteLink: string;
+  logoPath: string;
+};
+
+const partnersData: Partners[] = [
+  {
+    name: "CS Girls",
+    websiteLink: "https://www.csgirls.org/",
+    logoPath: "logos/csgirls.svg",
+  },
+  {
+    name: "MISSO",
+    websiteLink: "https://www.misso.org/",
+    logoPath: "logos/misso.svg",
+  },
+  {
+    name: "Code Coogs",
+    websiteLink: "https://www.codecoogs.com/",
+    logoPath: "logos/codecoogs.svg",
+  },
+  {
+    name: "Cougar AI",
+    websiteLink: "https://www.cougarai.org/",
+    logoPath: "logos/cougarai.svg",
+  },
+  {
+    name: "UH Cougarettes",
+    websiteLink: "https://uhcougarettes.com/",
+    logoPath: "logos/cougarettes.svg",
+  },
+  {
+    name: "Coog Esports",
+    websiteLink: "https://www.instagram.com/coogesports/?hl=en",
+    logoPath: "logos/cougar.svg",
+  },
+];
+---
+
+<div class="partners">
+  <div class="partners-text">
+    <p>Meet our Partners</p>
+    <p>
+      Take a look at the student organizations we partner up with for some of our events
+    </p>
+  </div>
+
+  <div class="grid-container">
+    {
+      partnersData.map((sponsor) => (
+        <a href={sponsor.websiteLink} target="_blank" rel="noopener noreferrer">
+          <div class="card">
+            <img src={sponsor.logoPath} alt={sponsor.name} />
+          </div>
+        </a>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .partners-text {
+    margin: 2rem 0.5rem;
+    padding: 0 2rem;
+    text-align: center;
+
+    p {
+      &:first-of-type {
+        margin: 0.5rem 0;
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: var(--cougarcs-cougar-red);
+      }
+
+      &:last-of-type {
+        margin: 0;
+        font-size: 1.1rem;
+        color: var(--cougarcs-neutral-grey);
+      }
+    }
+  }
+
+  .grid-container {
+    margin-top: 1.5rem;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @media (min-width: 769px) {
+      padding: 0 8rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 100%;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+
+    &:hover {
+      border-color: var(--cougarcs-cougar-red);
+      border-width: 2px;
+      background-color: #fae7ea;
+    }
+
+    img {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+  }
+</style>

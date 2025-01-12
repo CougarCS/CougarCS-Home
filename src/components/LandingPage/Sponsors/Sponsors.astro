@@ -1,0 +1,179 @@
+---
+import { Icon } from "astro-icon/components";
+import SectionIconHeading from "../SectionIconHeading.astro";
+
+// credits to Brandon for doing this bit
+// https://github.com/BvChung 🐐
+
+type SponsorCard = {
+  name: string;
+  logoPath: string;
+  donationAmount?: number;
+  logoHeight: number;
+  logoWidth: number;
+};
+
+const platSponsorData: SponsorCard[] = [
+  {
+    name: "ConocoPhillips",
+    logoPath: "logos/conocophilips.svg",
+    donationAmount: 1000,
+    logoHeight: 50.25,
+    logoWidth: 225,
+  },
+  {
+    name: "LyondellBasell",
+    logoPath: "logos/lyondellbasell.svg",
+    donationAmount: 500,
+    logoHeight: 68.41,
+    logoWidth: 202.79,
+  },
+  {
+    name: "Pros",
+    logoPath: "logos/pros.svg",
+    donationAmount: 250,
+    logoHeight: 38,
+    logoWidth: 124.19,
+  },
+  {
+    name: "Chevron",
+    logoPath: "logos/chevron.svg",
+    donationAmount: 100,
+    logoHeight: 89.77,
+    logoWidth: 80.2,
+  },
+  {
+    name: "Google",
+    logoPath: "logos/google.svg",
+    donationAmount: 50,
+    logoHeight: 47,
+    logoWidth: 150,
+  },
+  {
+    name: "RedBull",
+    logoPath: "logos/redbull.svg",
+    donationAmount: 25,
+    logoHeight: 85.25,
+    logoWidth: 140.16,
+  },
+];
+---
+
+<div class="sponsors">
+  <div class="sponsors-header">
+    <SectionIconHeading text="Sponsors & Partners">
+      <Icon
+        style="color: var(--cougarcs-cougar-red); background-color: white; padding: 2px;"
+        name="mdi:account-heart"
+      />
+    </SectionIconHeading>
+  </div>
+
+  <div class="sponsors-text">
+    <p>Thank you to all of our amazing sponsors!</p>
+    <p>Explore the companies that believe in what we do.</p>
+  </div>
+
+  <div class="grid-container">
+    {
+      platSponsorData.map((sponsor) => (
+        <div class="card">
+          <img
+            src={sponsor.logoPath}
+            alt={sponsor.name}
+            height={sponsor.logoHeight}
+            width={sponsor.logoWidth}
+          />
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<style>
+  .sponsors-header {
+    margin: 0 auto;
+    max-width: fit-content;
+    text-align: center;
+  }
+
+  .sponsors-text {
+    margin: 1.25rem 0.5rem;
+    padding: 0 2rem;
+    text-align: center;
+
+    p:first-of-type {
+      margin: 0.5rem 0;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: var(--cougarcs-cougar-red);
+    }
+
+    p:last-of-type {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--cougarcs-neutral-grey);
+    }
+  }
+
+  .sponsors {
+    padding: 3.5rem 0;
+    padding-bottom: 0;
+    border-top: 1.5px solid rgba(0, 0, 0, 0.15);
+  }
+
+  .plat-sponsor-header {
+    margin: 0 auto 2rem;
+    width: 80%;
+    text-align: center;
+    line-height: 0.1em;
+    border-top: 2px solid var(--cougarcs-cougar-red);
+    border-bottom: 2px solid var(--cougarcs-cougar-red);
+    color: var(--cougarcs-cougar-red);
+
+    span {
+      background: #fff;
+      padding: 0 20px;
+    }
+  }
+
+  .grid-container {
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+    width: 100%;
+    border-radius: 0.75rem;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+  }
+
+  .card:hover {
+    border-color: var(--cougarcs-cougar-red);
+    border-width: 2px;
+    background-color: #fae7ea;
+  }
+
+  .card img {
+    max-width: 80%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  @media (min-width: 769px) {
+    .grid-container {
+      padding: 0 8rem;
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
