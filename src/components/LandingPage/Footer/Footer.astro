@@ -1,0 +1,136 @@
+---
+import { Icon } from "astro-icon/components";
+import CougarCSLogo from "../../Navbar/CougarCSLogo.astro";
+---
+
+<div class="footer">
+  <div class="footer-content">
+    <div class="logo">
+      <CougarCSLogo />
+    </div>
+
+    <div class="links">
+      <a href="#">Home</a>
+      <a href="#">About Us</a>
+      <a href="#">Branches</a>
+      <a href="#">Sponsors</a>
+      <a href="#">Partners</a>
+      <a href="#">Contact Us</a>
+    </div>
+
+    <div class="socials">
+      <Icon name="simple-icons:github" />
+      <Icon name="mdi:linkedin" />
+      <Icon name="simple-icons:discord" />
+      <Icon name="simple-icons:instagram" />
+      <Icon name="simple-icons:bento" />
+    </div>
+
+    <div class="copyright">
+      <p>© 2025 CougarCS.</p>
+    </div>
+  </div>
+
+  <img src="/footer-pattern.png" class="footer-pattern" />
+</div>
+
+<style>
+  .footer {
+    background-color: var(--cougarcs-neutral-grey);
+    color: white;
+
+    .footer-content {
+      padding: 1.5rem;
+
+      display: grid;
+
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(3, auto);
+      gap: 0.5rem;
+      align-items: center;
+
+      font-size: 0.9rem;
+      text-align: center;
+
+      .logo {
+        display: none;
+      }
+
+      .socials {
+        padding: 1.5rem;
+
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        svg {
+          fill: white;
+          width: 2rem;
+          height: 2rem;
+        }
+      }
+
+      .links {
+        margin: 0 auto;
+
+        width: 90%;
+
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+
+        a {
+          color: white;
+          text-decoration: none;
+        }
+
+        .copyright {
+        }
+      }
+
+      @media (min-width: 1024px) {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        padding: 1.5rem 8rem;
+
+        .logo {
+          display: block;
+        }
+
+        .socials {
+          justify-content: flex-start;
+          padding: 1.5rem 0;
+        }
+
+        .copyright {
+          text-align: right;
+        }
+
+        .links {
+          width: 100%;
+
+          gap: 2rem;
+
+          justify-content: flex-end;
+          flex-wrap: nowrap;
+        }
+      }
+    }
+
+    /* color pattern, shown only on mobile */
+    .footer-pattern {
+      display: block;
+      width: 100%;
+      height: 100px;
+      object-fit: cover;
+
+      /* hide on med screns/desktop */
+      @media (min-width: 425px) {
+        display: none;
+      }
+    }
+  }
+</style>

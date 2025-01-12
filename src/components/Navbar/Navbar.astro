@@ -1,6 +1,14 @@
 ---
 import CougarCSLogo from "./CougarCSLogo.astro";
 import { Icon } from "astro-icon/components";
+
+const navbarLinks = [
+  { name: "Home", href: "#" },
+  { name: "Events", href: "#" },
+  { name: "Contact Us", href: "#" },
+  { name: "Docs", href: "#" },
+  { name: "CodeRED", href: "#" },
+];
 ---
 
 <div class="navbar">
@@ -9,33 +17,60 @@ import { Icon } from "astro-icon/components";
       <CougarCSLogo />
     </a>
 
+    <!-- Links, only visible on large screens. -->
+    <nav class="navbar-links">
+      {
+        navbarLinks.map((link) => (
+          <a class="navbar-link" href={link.href}>
+            {link.name}
+          </a>
+        ))
+      }
+    </nav>
+
+    <button class="navbar-become-member"> Become a Member </button>
+
     <button class="menu-toggle">
       <Icon class="menu-toggle-icon" name="mdi:menu" />
     </button>
   </div>
 
-  <nav class="navbar-menu">
-    <a href="#">Home</a>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
+  <!-- Hamburger Menu items -->
+  <nav class="navbar-menu-items">
+    {
+      navbarLinks.map((link) => (
+        <a class="navbar-menu-item" href={link.href}>
+          {link.name}
+        </a>
+      ))
+    }
+
+    <a class="navbar-menu-item navbar-menu-become-member" href="/join">Become a Member</a>
   </nav>
 </div>
 
 <script>
   const menuToggle = document.querySelector(".menu-toggle");
-  const menu = document.querySelector(".navbar-menu");
+  const menu = document.querySelector(".navbar-menu-items");
+
+  let isOpen = false;
 
   if (menuToggle && menu) {
     menuToggle.addEventListener("click", () => {
-      console.log("clicked");
-      menu.classList.toggle("show");
+      isOpen = !isOpen;
+
+      if (isOpen) {
+        menu.classList.add("show");
+      } else {
+        menu.classList.remove("show");
+      }
     });
   }
 </script>
 
 <style>
   .navbar {
+    z-index: 10000;
     position: sticky;
     top: 0;
 
@@ -47,6 +82,52 @@ import { Icon } from "astro-icon/components";
       background-color: #333;
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
       color: #fff;
+    }
+
+    /* links, visible only on desktop */
+    .navbar-links {
+      display: none;
+      gap: 1.25rem;
+
+      .navbar-link {
+        color: #fff;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.25rem;
+
+        &:hover {
+          background-color: rgba(255, 255, 255, 0.1);
+        }
+      }
+
+      /* show only on desktop */
+      @media (min-width: 1024px) {
+        display: flex;
+      }
+    }
+
+    .navbar-become-member {
+      display: none;
+      padding: 0.5rem 1rem;
+
+      border: 2px solid hsl(350, 70%, 50%);
+      border-radius: 0.3rem;
+
+      background-color: var(--cougarcs-cougar-red);
+      color: white;
+
+      font-size: 1rem;
+
+      cursor: pointer;
+
+      &:hover {
+        border: 2px solid hsl(350, 70%, 80%);
+      }
+
+      /* show only on desktop */
+      @media (min-width: 1024px) {
+        display: flex;
+      }
     }
 
     /* hamburger button */
@@ -63,22 +144,29 @@ import { Icon } from "astro-icon/components";
         color: #fff;
         transform: scale(2.5);
       }
+
+      /* hide on desktop */
+      @media (min-width: 1024px) {
+        display: none;
+      }
     }
 
     /* menu */
-    .navbar-menu {
+    .navbar-menu-items {
       display: none;
-      width: 100%;
-      background-color: #fff;
-      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
 
       &.show {
-        display: block;
+        display: flex;
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+        flex-direction: column;
       }
 
-      a {
+      .navbar-menu-item {
         display: block;
-        padding: 10px;
+        padding: 1.25rem 1.25rem;
         border-bottom: 1px solid #eee;
         text-decoration: none;
         color: #333;
@@ -86,6 +174,17 @@ import { Icon } from "astro-icon/components";
         &:hover {
           background-color: #f9f9f9;
         }
+
+        /* hide on desktop */
+        @media (min-width: 1024px) {
+          display: none;
+        }
+      }
+
+      .navbar-menu-become-member {
+        padding: 1.25rem 1.25rem;
+        color: var(--cougarcs-cougar-red);
+        background-color: rgba(255, 0, 0, 0.05);
       }
     }
   }

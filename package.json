@@ -12,6 +12,7 @@
     "@astrojs/react": "^4.1.2",
     "@astrojs/sitemap": "^3.2.1",
     "@iconify-json/mdi": "^1.2.2",
+    "@iconify-json/simple-icons": "^1.2.19",
     "@types/react": "^19.0.4",
     "@types/react-dom": "^19.0.2",
     "astro": "^5.1.1",
