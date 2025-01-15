@@ -23,26 +23,31 @@ We use [Astro](https://astro.build/) as our framework so the code is close to we
 1. Clone the repository:
 
    ```sh
+   git clone git@github.com:CougarCS/CougarCS-Home.git
+   ```
+   or
+   
+   ```sh
    git clone https://github.com/yourusername/CougarCS-Home.git
    ```
 
-2. Navigate to the project directory:
+3. Navigate to the project directory:
 
    ```sh
    cd CougarCS-Home
    ```
 
-3. Install the dependencies [(we try to have very few!)](https://github.com/CougarCS/CougarCS-Home/blob/main/package.json):
+4. Install the dependencies [(we try to have very few!)](https://github.com/CougarCS/CougarCS-Home/blob/main/package.json):
 
    ```sh
    npm install
    ```
 
-4. Start the dev server:
+5. Start the dev server:
 
    ```sh
    npx astro dev
    ```
 
-5. Your terminal should tell you the URL the dev site is active on.
+6. Your terminal should tell you the URL the dev site is active on.
    > this should be http://localhost:4321/
