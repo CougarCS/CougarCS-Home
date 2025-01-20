@@ -10,5 +10,6 @@ import react from '@astrojs/react';
 
 export default defineConfig({
     site: 'https://dev.cougarcs.com/',
+    output: 'server',
     integrations: [sitemap(), icon(), react()]
 });

@@ -1,8 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
-import Navbar from "../components/Navbar/Navbar.astro";
-
 import Hero from "../components/LandingPage/Hero.astro";
 import ScrollingStats from "../components/LandingPage/ScrollingStats.astro";
 import AboutUs from "../components/LandingPage/AboutUs.astro";
@@ -10,12 +8,11 @@ import WhatWeOffer from "../components/LandingPage/WhatWeOffer/WhatWeOffer.astro
 import Branches from "../components/LandingPage/Branches/Branches.astro";
 import Sponsors from "../components/LandingPage/Sponsors/Sponsors.astro";
 import Partners from "../components/LandingPage/Partners/Partners.astro";
+import MeetTheOfficers from "../components/LandingPage/MeetOfficers/MeetTheOfficers.astro";
 import Footer from "../components/LandingPage/Footer/Footer.astro";
 ---
 
 <BaseLayout>
-  <Navbar />
-
   <div class="hero-container">
     <Hero />
   </div>
@@ -42,6 +39,10 @@ import Footer from "../components/LandingPage/Footer/Footer.astro";
 
   <div class="partners-container">
     <Partners />
+  </div>
+
+  <div class="officers-container">
+    <MeetTheOfficers />
   </div>
 
   <div class="footer-container">

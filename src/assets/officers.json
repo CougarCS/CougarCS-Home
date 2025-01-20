@@ -1,0 +1,16 @@
+[
+    {
+        "name": "Sneha Jacob",
+        "image": "officerA.png",
+        "position": "President",
+        "email": "test@email.com",
+        "linkedin": "https://www.linkedin.com"
+    },
+    {
+        "name": "Ashish Job",
+        "image": "officerA.png",
+        "position": "Vice President",
+        "email": "test@email.com",
+        "linkedin": "https://www.linkedin.com"
+    }
+]

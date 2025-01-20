@@ -14,7 +14,7 @@ import BranchesTabber from "./BranchesTabber.jsx";
     </SectionIconHeading>
   </div>
 
-  <div class="what-we-offer-text">
+  <div class="branches-text">
     <p>Explore our three branches</p>
     <p>Learn about the branches of CougarCS that power what we do.</p>
   </div>
@@ -24,7 +24,7 @@ import BranchesTabber from "./BranchesTabber.jsx";
 
 <style>
   .branches {
-    padding: 4rem 0;
+    padding: 4rem 1rem;
     background-color: #f1f5f7;
 
     .branches-header {
@@ -33,7 +33,7 @@ import BranchesTabber from "./BranchesTabber.jsx";
       text-align: center;
     }
 
-    .what-we-offer-text {
+    .branches-text {
       margin: 1.25rem 0.5rem;
       padding: 0 2rem;
       text-align: center;
@@ -52,6 +52,10 @@ import BranchesTabber from "./BranchesTabber.jsx";
 
         color: var(--cougarcs-neutral-grey);
       }
+    }
+
+    @media (min-width: 768px) {
+      padding: 4rem 0;
     }
   }
 </style>

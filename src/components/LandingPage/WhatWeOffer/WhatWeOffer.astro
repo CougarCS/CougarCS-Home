@@ -25,7 +25,7 @@ import { Icon } from "astro-icon/components";
       image="/what-we-offer/goog-wkshp.jpeg"
       desc="Enhance your skills and knowledge in the latest technologies and trends.">
       <div
-        style=" padding: 8px; margin-bottom: 8px; width: 24px; height: 24px; background-color: var(--cougarcs-cougar-red); display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid hsl(350, 86%, 60%);">
+        style=" padding: 0px; margin-bottom: 8px; width: 48px; height: 48px; background-color: var(--cougarcs-cougar-red); display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid hsl(350, 86%, 60%);">
         <Icon
           style="color: white; background-color: var(--cougarcs-cougar-red); transform: scale(1.5);"
           name="mdi:desktop-windows"
@@ -38,7 +38,7 @@ import { Icon } from "astro-icon/components";
       image="/what-we-offer/painting.jpeg"
       desc="Gain access to industry insights, network with professionals, & discover career opportunities.">
       <div
-        style=" padding: 8px; margin-bottom: 8px; width: 24px; height: 24px; background-color: #00B2FF; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid hsl(204, 86%, 80%);">
+        style=" padding: 0px; margin-bottom: 8px; width: 48px; height: 48px; background-color: #00B2FF; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid hsl(204, 86%, 80%);">
         <Icon
           style="color: white; background-color: #00B2FF; transform: scale(1.5);"
           name="mdi:speak"
@@ -51,7 +51,7 @@ import { Icon } from "astro-icon/components";
       image="/what-we-offer/tutoring.png"
       desc="Take advantage of our tutoring services to boost your understanding and performance in classes.">
       <div
-        style=" padding: 8px; margin-bottom: 8px; width: 24px; height: 24px; background-color: #0BC756; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid hsl(144, 90%, 80%);">
+        style=" padding: 0px; margin-bottom: 8px; width: 48px; height: 48px; background-color: #0BC756; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid hsl(144, 90%, 80%);">
         <img
           style="color: white; background-color: #0BC756; transform: scale(.75) translateY(2px);"
           src="/tutoringlogo.svg"
@@ -65,7 +65,7 @@ import { Icon } from "astro-icon/components";
       image="/what-we-offer/bruzz.jpeg"
       desc="Participate in realistic mock interviews and resume building workshops to land your dream job.">
       <div
-        style=" padding: 8px; margin-bottom: 8px; width: 24px; height: 24px; background-color: #7554F6; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid hsl(252, 90%, 75%);">
+        style=" padding: 0px; margin-bottom: 8px; width: 48px; height: 48px; background-color: #7554F6; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid hsl(252, 90%, 75%);">
         <Icon
           style="color: white; background-color: #7554F6; transform: scale(1.5);"
           name="mdi:briefcase-upload"
@@ -78,7 +78,7 @@ import { Icon } from "astro-icon/components";
       image="/what-we-offer/gaming.jpeg"
       desc="Join in on fun socials and unwind with fellow peers, playing video games, painting and more!">
       <div
-        style=" padding: 8px; margin-bottom: 8px; width: 24px; height: 24px; background-color: var(--cougarcs-cougar-red); display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid hsl(350, 86%, 60%);">
+        style=" padding: 0px; margin-bottom: 8px; width: 48px; height: 48px; background-color: var(--cougarcs-cougar-red); display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid hsl(350, 86%, 60%);">
         <Icon
           style="color: white; background-color: var(--cougarcs-cougar-red); transform: scale(1.5);"
           name="mdi:smiley-excited"
@@ -91,7 +91,7 @@ import { Icon } from "astro-icon/components";
       image="/what-we-offer/tariq-locked-in.jpeg"
       desc="Become a part of the largest student-run Computer Science organization at the University of Houston.">
       <div
-        style=" padding: 8px; margin-bottom: 8px; width: 24px; height: 24px; background-color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid hsl(0, 0%, 70%);">
+        style=" padding: 0px; margin-bottom: 8px; width: 48px; height: 48px; background-color: white; display: flex; align-items: center; justify-content: center; border-radius: 50%; border: 1px solid hsl(0, 0%, 70%);">
         <Icon
           style="color: var(--cougarcs-cougar-red); background-color: white; transform: scale(1.5);"
           name="mdi:web"
@@ -103,7 +103,7 @@ import { Icon } from "astro-icon/components";
 
 <style>
   .what-we-offer {
-    padding: 4rem 3rem;
+    padding: 4rem 1rem;
     background-color: #161719;
 
     .what-we-offer-header {
@@ -113,7 +113,8 @@ import { Icon } from "astro-icon/components";
 
     .what-we-offer-text {
       margin: 1.25rem 0.5rem;
-      padding: 0 2rem;
+      padding: 0;
+
       text-align: center;
 
       p:first-of-type {
@@ -130,18 +131,27 @@ import { Icon } from "astro-icon/components";
 
         color: grey;
       }
+
+      @media (min-width: 768px) {
+        padding: 0 2rem;
+      }
+    }
+
+    @media (min-width: 768px) {
+      padding: 4rem 3rem;
     }
 
     .what-we-offer-cards {
       display: grid;
       grid-template-columns: 1fr;
       gap: 1rem;
-      padding: 1rem;
+      padding: 0.5rem;
       max-width: 100%;
       margin: 0 auto;
 
       @media (min-width: 768px) {
         grid-template-columns: repeat(2, 1fr);
+        padding: 1rem;
       }
     }
   }
