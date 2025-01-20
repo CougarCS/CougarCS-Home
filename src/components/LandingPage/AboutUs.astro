@@ -15,11 +15,9 @@ import SectionIconHeading from "./SectionIconHeading.astro";
   <div>
     <div class="about-us-header">
       <SectionIconHeading text="About Us">
-        <img
-          style="padding: 8px; width: 70%; background-color: white;"
-          src="/cougarLogo.svg"
-          alt="Logo"
-        />
+        <div style="padding: 3px; width: 100%; background-color: white;">
+          <img src="/cougarLogo.svg" alt="Logo" />
+        </div>
       </SectionIconHeading>
     </div>
 
@@ -44,7 +42,7 @@ import SectionIconHeading from "./SectionIconHeading.astro";
     .about-us-image {
       width: 80%;
       height: auto;
-      margin: auto 0;
+      margin: 0 auto;
     }
 
     .about-us-header {
@@ -55,7 +53,7 @@ import SectionIconHeading from "./SectionIconHeading.astro";
     .about-us-text {
       padding: 0 2rem;
       margin: 0 auto;
-      max-width: 500px;
+      max-width: 700px;
       font-size: larger;
 
       .highlighted {

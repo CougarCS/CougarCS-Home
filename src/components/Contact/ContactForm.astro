@@ -1,0 +1,133 @@
+---
+import { Icon } from "astro-icon/components";
+
+const params = Astro.url.searchParams;
+const submittedForm = params.get("formsuccess");
+
+type FormErrors = {
+  name: string;
+  email: string;
+  message: string;
+};
+
+interface Props {
+  errors?: FormErrors;
+}
+
+const errors = { name: "", email: "", message: "" };
+const { errors: formErrors = errors } = Astro.props;
+---
+
+{
+  !submittedForm && (
+    <form method="POST">
+      <label>
+        <span>Name</span>
+        <input type="text" name="name" placeholder="Cody Cougar" required />
+        {formErrors.name && <span class="error">{formErrors.name}</span>}
+      </label>
+
+      <label>
+        <span>Email</span>
+        <input type="email" name="email" placeholder="info@cougarcs.com" required />
+        {formErrors.email && <span class="error">{formErrors.email}</span>}
+      </label>
+
+      <label>
+        <span>Message</span>
+        <textarea
+          name="message"
+          placeholder="Questions, comments, concerns, suggestions"
+          required
+        />
+        {formErrors.message && <span class="error">{formErrors.message}</span>}
+      </label>
+
+      <button>Submit</button>
+    </form>
+  )
+}
+
+{
+  submittedForm && (
+    <div class="form-success">
+      <h2>Successfully sent message.</h2>
+      <p>
+        An officer will get back to you as soon as possible. Thank you for reaching out!
+      </p>
+      <Icon name="mdi:check" size="2rem" />
+    </div>
+  )
+}
+
+<style>
+  .form-success {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 4rem;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    background: rgba(11, 199, 86, 0.1);
+    border: 1.5px solid rgb(11, 199, 86);
+    border-radius: 0.5rem;
+  }
+
+  form {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    margin: 0 auto;
+
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #cccdce;
+    background-color: #f1f5f7;
+  }
+
+  label {
+    display: grid;
+    gap: 0.5rem;
+
+    span {
+      font-family: "Chakra Petch", sans-serif;
+      font-weight: bold;
+    }
+
+    .error {
+      color: var(--cougarcs-cougar-red);
+      font-size: 0.9rem;
+    }
+
+    input,
+    textarea {
+      font-size: 1rem;
+
+      padding: 0.5rem;
+      border-radius: 0.25rem;
+      border: 1px solid #cccdce;
+    }
+
+    textarea {
+      min-height: 12rem;
+    }
+  }
+
+  button {
+    font-size: 1rem;
+    cursor: pointer;
+
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    border: 2px solid hsl(350, 70%, 50%);
+
+    background-color: var(--cougarcs-cougar-red);
+    color: white;
+
+    &:hover {
+      border: 2px solid hsl(350, 70%, 80%);
+    }
+  }
+</style>

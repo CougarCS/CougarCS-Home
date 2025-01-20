@@ -1,0 +1,223 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import OfficerCard from "../components/Contact/OfficerCard.astro";
+
+import officers from "../assets/officers.json";
+
+import ContactForm from "../components/Contact/ContactForm.astro";
+const cougarcsApiEndpoint = import.meta.env.COUGARCS_LEGACY_API;
+
+// validator for the contact form
+// this bit runs on the server, so we validate across both client + srv
+function isValidEmail(email: string) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+  return emailRegex.test(email);
+}
+
+const errors = { name: "", email: "", message: "" };
+if (Astro.request.method === "POST") {
+  try {
+    const data = await Astro.request.formData();
+
+    const [name, email, message] = ["name", "email", "message"].map((field) =>
+      data.get(field)
+    );
+
+    if (typeof name !== "string" || name.length < 1) {
+      errors.name += "Please enter a name.";
+    }
+
+    if (typeof email !== "string" || !isValidEmail(email)) {
+      errors.email += "Email is not valid.";
+    }
+
+    if (typeof message !== "string" || message.length < 6) {
+      errors.message += "Message must be at least 6 characters.";
+    }
+
+    const hasErrors = Object.values(errors).some((msg) => msg);
+
+    if (!hasErrors) {
+      // split name into first/last for API conformance
+      // first is every word but the last one, last is the last one
+      let [first, last] = ["Cougar", ""];
+
+      if (name) {
+        const words = String(name).split(" ");
+        first = words.slice(0, -1).join(" ");
+        last = words.slice(-1).join(" ");
+      }
+
+      // console.log("first", first, "last", last);
+
+      await fetch(`${cougarcsApiEndpoint}/api/send`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ firstName: first, lastName: last, email, body: message }),
+      });
+
+      return Astro.redirect("/contact?formsuccess=true");
+    }
+  } catch (error) {
+    if (error instanceof Error) {
+      console.error(error.message);
+    }
+  }
+}
+---
+
+<BaseLayout>
+  <div class="contact-header">
+    <h1>
+      <span
+        style="text-decoration: underline;
+        text-underline-offset: 0.2rem;
+        text-decoration-color: var(--cougarcs-cougar-red)"
+        >Contact Us</span
+      >
+    </h1>
+  </div>
+
+  <div class="contact-section">
+    <div class="info">
+      <p>
+        If you have any questions or concerns, please feel free to reach out to us at
+        <a target="_blank" href="mailto:info@cougarcs.com"> info@cougarcs.com </a>
+        or via this form.
+      </p>
+
+      <br />
+
+      <p>
+        You can also join our <a href="https://discord.gg/wEagwaXS7F" target="_blank"
+          >Discord</a
+        >, follow us on <a href="https://www.instagram.com/cougarcs_uh/" target="_blank"
+          >Instagram</a
+        >, or connect with us on <a
+          href="https://www.linkedin.com/company/cougarcs-uh/"
+          target="_blank">LinkedIn</a
+        >!
+      </p>
+
+      <br />
+
+      <p>
+        Have someone specific in mind? Our officers for the current term are listed in the
+        section below.
+      </p>
+
+      <hr />
+    </div>
+
+    <div class="contact-form">
+      <ContactForm {errors} />
+    </div>
+  </div>
+
+  <div class="officers-header">
+    <h2>
+      <span
+        style="text-decoration: underline;
+        text-underline-offset: 0.2rem;
+        text-decoration-color: var(--cougarcs-cougar-red)"
+        >Spring 2025</span
+      > Officer Team
+    </h2>
+  </div>
+
+  <div id="officers" class="officers-listing">
+    {officers.map((officer) => <OfficerCard officer={officer} />)}
+  </div>
+</BaseLayout>
+
+<style>
+  .contact-header,
+  .officers-header {
+    padding: 2rem;
+    color: white;
+    background-color: var(--cougarcs-neutral-grey);
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 1.25rem;
+  }
+
+  .contact-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+
+    padding: 2rem 2rem;
+
+    font-size: 1.1rem;
+    color: var(--cougarcs-neutral-grey);
+
+    background-color: #fff;
+    background-image: radial-gradient(#cccdce 1.25px, #fff 1.25px);
+    background-size: 30px 30px;
+
+    .contact-form {
+      width: 100%;
+    }
+
+    .info {
+      hr {
+        display: none;
+      }
+
+      a {
+        text-decoration: underline;
+        color: var(--cougarcs-cougar-red);
+        font-weight: bold;
+      }
+    }
+
+    @media screen and (min-width: 769px) {
+      grid-template-columns: 1fr 1fr;
+
+      padding: 2rem 4rem;
+
+      .info {
+        padding: 0.25rem;
+        height: fit-content;
+
+        background: white;
+        hr {
+          display: block;
+          max-width: 25rem;
+
+          border: 1px solid var(--cougarcs-cougar-red);
+          color: var(--cougarcs-cougar-red);
+          margin: 0.5rem 0;
+        }
+
+        p {
+          max-width: 25rem;
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+
+  .officers-listing {
+    display: grid;
+    padding: 1.5rem 2rem;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+
+    @media (min-width: 425px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 1.5rem 4rem;
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>

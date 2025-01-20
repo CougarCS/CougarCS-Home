@@ -1,0 +1,106 @@
+---
+import { Image } from "astro:assets";
+import { Icon } from "astro-icon/components";
+
+interface Props {
+  officer: {
+    name: string;
+    position: string;
+    image: string;
+    email: string;
+    linkedin: string;
+  };
+}
+
+const { name, position, linkedin, email } = Astro.props.officer;
+---
+
+<div class="officer">
+  <div class="officer-image-container">
+    <Image
+      src="/officers/officerA.png"
+      alt={`A photo of ${name}`}
+      width={720}
+      height={720}
+      class={"officer-image"}
+    />
+  </div>
+
+  <div class="officer-info">
+    <h3>{name}</h3>
+    <p>{position}</p>
+
+    <div class="links">
+      <a href={linkedin} target="_blank" rel="noopener noreferrer">
+        <Icon name="mdi:linkedin" />
+      </a>
+      <a href="mailto:{email}">
+        <Icon name="mdi:email" />
+      </a>
+    </div>
+  </div>
+</div>
+
+<style>
+  .officer {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #f1f5f7;
+    border-radius: 0.5rem;
+    border: 1.5px solid #cccdce;
+    text-align: center;
+
+    .officer-image-container {
+      width: 100%;
+      padding-top: 1.75rem;
+
+      .officer-image {
+        width: 100%;
+        height: 100%;
+        max-width: 65%;
+
+        margin: 0 auto;
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+        border-radius: 0.25rem;
+        border: 3px solid hsl(200, 27%, 92%);
+      }
+    }
+
+    .officer-info {
+      padding: 1rem 1rem;
+      color: var(--cougarcs-neutral-grey);
+
+      h3 {
+        font-size: 1.25rem;
+        font-weight: 900;
+      }
+
+      .links {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 2rem;
+
+        svg {
+          width: 2rem;
+          height: 2rem;
+          margin-top: 0.5rem;
+          fill: var(--cougarcs-cougar-red);
+          color: var(--cougarcs-cougar-red);
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      .officer-image {
+        max-width: 12rem;
+      }
+
+      .officer-info {
+        padding: 1rem 2rem;
+      }
+    }
+  }
+</style>
