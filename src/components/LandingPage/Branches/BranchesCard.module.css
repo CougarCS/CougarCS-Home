@@ -8,7 +8,7 @@
 
   padding: 2rem;
 
-  border: 2px solid #cccdce;
+  border: 2px solid var(--cougarcs-grey-border);
   background-color: white;
   border-top-left-radius: 0.4rem;
   border-top-right-radius: 0.4rem;

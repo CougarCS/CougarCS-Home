@@ -1,0 +1,95 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import Stripe from "stripe";
+
+const stripe = new Stripe(import.meta.env.STRIPE_SECRET_KEY);
+
+const sessionId = Astro.url.searchParams.get("session_id") || "";
+
+const legacyResponse = await fetch(
+  `${import.meta.env.COUGARCS_LEGACY_API}/api/payment/sessionRegister`,
+  {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify({
+      sessionId: sessionId,
+    }),
+  }
+);
+
+let checkoutSession;
+if (legacyResponse || sessionId) {
+  checkoutSession = await stripe.checkout.sessions.retrieve(sessionId);
+} else {
+  Astro.redirect("/join");
+}
+
+const memberFirstName = checkoutSession?.customer_details?.name?.split(" ")[0];
+---
+
+<BaseLayout>
+  <div class="join-success">
+    <div class="join-header">
+      <h2>Thank you for joining CougarCS!</h2>
+      <p>
+        Your membership has been successfully processed, {memberFirstName}.
+      </p>
+    </div>
+
+    <p>
+      Welcome to the club! You've taken the first step towards ensuring a successful
+      academic and professional career.
+    </p>
+    <p>
+      If you have any questions or concerns <a href="/contact">
+        please feel free to reach out to us.
+      </a>
+    </p>
+  </div>
+</BaseLayout>
+
+<style>
+  .join-success {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 10rem 4rem;
+
+    background-color: rgb(224, 250, 224);
+
+    .join-header {
+      font-weight: bold;
+      color: #07883b;
+
+      h2 {
+        font-family: "Chakra Petch", sans-serif;
+        font-size: 2rem;
+      }
+    }
+
+    a {
+      font-weight: bold;
+      color: #07883b;
+    }
+
+    @media screen and (min-width: 768px) {
+      padding: 10rem 4rem;
+      height: 100;
+
+      .join-header {
+        font-weight: bold;
+
+        h2 {
+          font-family: "Chakra Petch", sans-serif;
+          font-size: 3rem;
+        }
+      }
+
+      p {
+        max-width: 24rem;
+      }
+    }
+  }
+</style>

@@ -1,7 +1,5 @@
 ---
 import { Icon } from "astro-icon/components";
-import { Image } from "astro:assets";
-import background from "./officerbackground.png";
 ---
 
 <div class="meet-officers">
@@ -11,8 +9,6 @@ import background from "./officerbackground.png";
     <a href="/contact#officers">
       <button> Check out the team <Icon name="mdi:play" /> </button>
     </a>
-
-    <Image class="bg-image" src={background} alt="Slightly transparent CougarCS logo" />
   </div>
 </div>
 
@@ -36,7 +32,12 @@ import background from "./officerbackground.png";
     gap: 1.5rem;
     padding: 4rem 2rem;
 
-    background: linear-gradient(180deg, #d42e4a 0%, #c80f2e 100%);
+    overflow: clip;
+
+    background:
+    url("/officerbackground.png") right 0rem top 1rem / cover no-repeat,
+      linear-gradient(180deg, #d42e4a 0%, #c80f2e 100%);
+
     color: white;
 
     h2 {
@@ -60,7 +61,7 @@ import background from "./officerbackground.png";
         cursor: pointer;
 
         &:hover {
-          background-color: #f1f5f7;
+          background-color: var(--cougarcs-light-grey);
         }
 
         svg {
@@ -91,22 +92,13 @@ import background from "./officerbackground.png";
 
       border-radius: 0.5rem;
 
+      background:
+        url("/officerbackground.png") right 0rem top -1rem / 50% auto no-repeat,
+        linear-gradient(180deg, #d42e4a 0%, #c80f2e 100%);
+
       h2 {
         max-width: 24rem;
         text-align: left;
-      }
-
-      .bg-image {
-        position: absolute;
-        top: 7rem;
-        right: 0rem;
-        transform: none;
-        width: 60%;
-        height: 60%;
-        object-fit: cover;
-        z-index: 1;
-
-        overflow: visible;
       }
     }
   }

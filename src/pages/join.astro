@@ -1,0 +1,163 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import { Icon } from "astro-icon/components";
+
+import JoinForm from "../components/Join/JoinForm.astro";
+---
+
+<BaseLayout>
+  <div class="join">
+    <div class="join-header">
+      <h1>
+        <span
+          style="text-decoration: underline;
+              text-underline-offset: 0.2rem;
+              text-decoration-color: var(--cougarcs-cougar-red)"
+          >Join Our Pack</span
+        >
+      </h1>
+    </div>
+
+    <div class="join-explainer">
+      <div>
+        <p class="join-explainer-text">
+          CougarCS provides students with valuable career resources and events. Each
+          semester, we host numerous technical workshops, information sessions, and
+          programming challenges. Workshops and sessions, often led by FAANG and Fortune
+          100 companies, cover topics like resume reviews, career fair tips, and mock
+          interviews. We also offer weekly tutoring and academic support. Plus, our alumni
+          network includes industry professionals eager to connect with current members!
+        </p>
+        <JoinForm />
+      </div>
+      <div class="join-explainer-benefits">
+        <h2 style="letter-spacing: 0.025em;">Benefits</h2>
+        <ul>
+          <li><Icon name="mdi:star" /> Exclusive Workshops and Member Events</li>
+          <li><Icon name="mdi:file-document-check" /> Dedicated Resume Reviews</li>
+          <li><Icon name="simple-icons:discord" /> Discord Member Channels</li>
+          <li><Icon name="mdi:briefcase-upload" />Career Fair Prep</li>
+          <li><Icon name="mdi:tshirt-crew" /> CougarCS Merch</li>
+          <li><Icon name="mdi:television-play" /> Access to Recorded Events</li>
+        </ul>
+      </div>
+
+      <div class="join-form-section"></div>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .join-header {
+    padding: 2rem;
+    color: white;
+    background-color: var(--cougarcs-neutral-grey);
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 1.25rem;
+
+    text-align: center;
+  }
+
+  .join-explainer {
+    display: grid;
+
+    background-color: var(--cougarcs-light-grey);
+
+    .join-explainer-text {
+      padding: 1.5rem;
+      border: 1px solid var(--cougarcs-grey-border);
+    }
+
+    .join-explainer-benefits {
+      h2 {
+        width: 100%;
+        padding: 1.25rem;
+
+        font-family: "Chakra Petch", sans-serif;
+        font-size: 2rem;
+
+        border-bottom: 1px solid var(--cougarcs-grey-border);
+      }
+
+      ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+
+        li {
+          display: flex;
+          flex: 1;
+          align-items: center;
+
+          padding: 1rem 2rem;
+
+          background-color: white;
+          border-bottom: 1px solid var(--cougarcs-grey-border);
+          font-size: 1.1rem;
+
+          svg {
+            margin-right: 1.5rem;
+            color: var(--cougarcs-cougar-red);
+            fill: var(--cougarcs-cougar-red);
+
+            transform: scale(1.5);
+          }
+        }
+      }
+    }
+
+    @media screen and (min-width: 768px) {
+      & {
+        grid-template-columns: 0.8fr 0.7fr;
+
+        .join-explainer-text {
+          padding: 2rem 10%;
+          align-self: center;
+          font-size: 1.1rem;
+
+          border-right: 1px solid var(--cougarcs-grey-border);
+        }
+
+        .join-explainer-benefits {
+          background-color: var(--cougarcs-neutral-grey);
+          display: flex;
+          flex-direction: column;
+          align-content: space-between;
+
+          h2 {
+            padding: 0.75rem 2rem 0.5rem;
+
+            background-color: var(--cougarcs-light-grey);
+            border: 1px solid var(--cougarcs-grey-border);
+            border-left: none;
+          }
+
+          ul {
+            display: flex;
+            height: 100%;
+            flex-direction: column;
+            padding: 0;
+
+            li {
+              display: flex;
+              flex: 1;
+              align-items: center;
+
+              padding: 0 2rem;
+
+              font-size: 1.1rem;
+
+              svg {
+                margin-right: 1.5rem;
+                color: var(--cougarcs-cougar-red);
+                fill: var(--cougarcs-cougar-red);
+
+                transform: scale(1.5);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+</style>
