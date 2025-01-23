@@ -1,12 +1,12 @@
 import type { APIRoute } from 'astro';
 import Stripe from 'stripe';
 
-const stripe = new Stripe(import.meta.env.STRIPE_SECRET_KEY);
-const endpointSecret = import.meta.env.STRIPE_CHECKOUT_WEBHOOK_SECRET;
-
 // https://docs.stripe.com/checkout/fulfillment
 export const POST: APIRoute = async ({ request }) =>
 {
+    const stripe = new Stripe(import.meta.env.STRIPE_SECRET_KEY);
+    const endpointSecret = import.meta.env.STRIPE_CHECKOUT_WEBHOOK_SECRET;
+
     const rawBody = await request.text();
     const signature = request.headers.get('stripe-signature');
 

@@ -1,10 +1,10 @@
 import type { APIRoute } from 'astro';
 import Stripe from 'stripe';
 
-const stripe = new Stripe(import.meta.env.STRIPE_SECRET_KEY!, { typescript: true });
-
 export const POST: APIRoute = async ({ params, request, url, redirect }) =>
 {
+    const stripe = new Stripe(import.meta.env.STRIPE_SECRET_KEY!, { typescript: true });
+
     const tenure = url.searchParams.get('tenure');
     const product = url.searchParams.get('product');
 
