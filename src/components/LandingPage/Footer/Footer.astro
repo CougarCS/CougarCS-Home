@@ -10,19 +10,25 @@ import CougarCSLogo from "../../Navbar/CougarCSLogo.astro";
     </div>
 
     <div class="links">
-      <a href="#">Home</a>
-      <a href="#about-us">About Us</a>
-      <a href="#branches">Branches</a>
-      <a href="#sponsors">Sponsors</a>
-      <a href="#partners">Partners</a>
-      <a href="#contact-us">Contact Us</a>
+      <a href="/">Home</a>
+      <a href="/#about-us">About Us</a>
+      <a href="/#branches">Branches</a>
+      <a href="/#sponsors">Sponsors</a>
+      <a href="/#partners">Partners</a>
+      <a href="/#contact-us">Contact Us</a>
     </div>
 
     <div class="socials">
-      <a href="https://github.com/CougarCS/CougarCS-Home"> <Icon name="simple-icons:github" /> </a>
-      <a href="https://www.linkedin.com/company/cougarcs-uh/"><Icon name="mdi:linkedin" /> </a>
+      <a href="https://github.com/CougarCS/CougarCS-Home">
+        <Icon name="simple-icons:github" />
+      </a>
+      <a href="https://www.linkedin.com/company/cougarcs-uh/"
+        ><Icon name="mdi:linkedin" />
+      </a>
       <a href="https://discord.gg/wEagwaXS7F"><Icon name="simple-icons:discord" /></a>
-      <a href="https://www.instagram.com/cougarcs_uh/"><Icon name="simple-icons:instagram" /></a>
+      <a href="https://www.instagram.com/cougarcs_uh/"
+        ><Icon name="simple-icons:instagram" /></a
+      >
       <!-- <a href=""><Icon name="simple-icons:bento" /></a> INSERT BENTO LINK HERE -->
     </div>
 
@@ -64,17 +70,15 @@ import CougarCSLogo from "../../Navbar/CougarCSLogo.astro";
         gap: 1rem;
 
         a {
-        color: white;
-        text-decoration: none;
-        transition: color 0.3s ease;
+          color: white;
+          text-decoration: none;
+          transition: color 0.3s ease;
         }
 
         a:hover,
         a:focus {
           color: var(--cougarcs-cougar-red);
         }
-
-
 
         svg {
           fill: white;
@@ -98,9 +102,7 @@ import CougarCSLogo from "../../Navbar/CougarCSLogo.astro";
         a {
           color: white;
           text-decoration: none;
-        }
-
-        .copyright {
+          white-space: nowrap;
         }
       }
 
@@ -115,7 +117,14 @@ import CougarCSLogo from "../../Navbar/CougarCSLogo.astro";
 
         .socials {
           justify-content: flex-start;
+          gap: 2rem;
           padding: 1.5rem 0;
+
+          svg {
+            fill: white;
+            width: 1.5rem;
+            height: 1.5rem;
+          }
         }
 
         .copyright {
@@ -141,7 +150,7 @@ import CougarCSLogo from "../../Navbar/CougarCSLogo.astro";
       object-fit: cover;
 
       /* hide on med screns/desktop */
-      @media (min-width: 425px) {
+      @media (min-width: 768px) {
         display: none;
       }
     }

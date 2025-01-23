@@ -9,7 +9,6 @@ import Branches from "../components/LandingPage/Branches/Branches.astro";
 import Sponsors from "../components/LandingPage/Sponsors/Sponsors.astro";
 import Partners from "../components/LandingPage/Partners/Partners.astro";
 import MeetTheOfficers from "../components/LandingPage/MeetOfficers/MeetTheOfficers.astro";
-import Footer from "../components/LandingPage/Footer/Footer.astro";
 ---
 
 <BaseLayout>
@@ -21,7 +20,7 @@ import Footer from "../components/LandingPage/Footer/Footer.astro";
     <ScrollingStats />
   </div>
 
-  <div class="about-us-container">
+  <div id="about-us" class="about-us-container">
     <AboutUs />
   </div>
 
@@ -29,23 +28,19 @@ import Footer from "../components/LandingPage/Footer/Footer.astro";
     <WhatWeOffer />
   </div>
 
-  <div class="branches-container">
+  <div id="branches" class="branches-container">
     <Branches />
   </div>
 
-  <div class="sponsors-container">
+  <div id="sponsors" class="sponsors-container">
     <Sponsors />
   </div>
 
-  <div class="partners-container">
+  <div id="partners" class="partners-container">
     <Partners />
   </div>
 
   <div class="officers-container">
     <MeetTheOfficers />
-  </div>
-
-  <div class="footer-container">
-    <Footer />
   </div>
 </BaseLayout>

@@ -3,7 +3,7 @@ import CougarCSLogo from "./CougarCSLogo.astro";
 import { Icon } from "astro-icon/components";
 
 const navbarLinks = [
-  { name: "Events", href: "#" },
+  { name: "Home", href: "/" },
   { name: "Contact Us", href: "/contact" },
   { name: "Docs", href: "https://docs.cougarcs.com/" },
   {
@@ -30,7 +30,9 @@ const navbarLinks = [
       }
     </nav>
 
-    <button class="navbar-become-member"> Become a Member </button>
+    <button class="navbar-become-member">
+      <a href="/join" style="color: inherit; text-decoration: none;">Become a Member</a>
+    </button>
 
     <button class="menu-toggle">
       <Icon class="menu-toggle-icon" name="mdi:menu" />

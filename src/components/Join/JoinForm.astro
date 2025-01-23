@@ -1,25 +1,33 @@
 ---
+const isDev = import.meta.env.MODE === "development";
 
+const semester = isDev
+  ? "price_1Qjw5mBcoBQz8xvUepJ9JtgU"
+  : "price_1QkEDqBcoBQz8xvUnBhKPZY1";
+
+const year = isDev ? "price_1Qjw62BcoBQz8xvUejSqWzQx" : "price_1QkEDkBcoBQz8xvUEL8442WC";
 ---
 
 <div class="join-form">
   <div class="description">
     <p>
       Memberships are priced at
-      <span style="color: var(--cougarcs-cougar-red); font-weight: bold;"> $40.00 for a year </span> or <span
-        style="color: var(--cougarcs-cougar-red); font-weight: bold;">$25.00 for a semester.</span
+      <span style="color: var(--cougarcs-cougar-red); font-weight: bold;">
+        $40.00 for a year
+      </span> or <span style="color: var(--cougarcs-cougar-red); font-weight: bold;"
+        >$25.00 for a semester.</span
       > You can join by filling out our membership form:
     </p>
   </div>
 
   <form
-    action="/api/payments/create-checkout-session?tenure=year&product=price_1QkEDkBcoBQz8xvUEL8442WC"
+    action=`/api/payments/create-checkout-session?tenure=year&product=${year}`
     method="POST">
     <button type="submit" id="checkout-button">Year Membership (Save 20%)</button>
   </form>
 
   <form
-    action="/api/payments/create-checkout-session?tenure=semester&product=price_1QkEDqBcoBQz8xvUnBhKPZY1"
+    action=`/api/payments/create-checkout-session?tenure=semester&product=${semester}`
     method="POST">
     <button type="submit" id="checkout-button">Semester Membership</button>
   </form>
