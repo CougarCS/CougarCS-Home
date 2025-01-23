@@ -1,4 +1,6 @@
 ---
+import { Image } from "astro:assets";
+
 export interface Props {
   image: string;
   title: string;
@@ -9,7 +11,15 @@ const { desc, image, title } = Astro.props;
 ---
 
 <div class="card">
-  <img src={image} alt={title} class="card-image" />
+  <Image
+    src={image}
+    alt={title}
+    class="card-image"
+    width="800"
+    height="600"
+    loading="eager"
+  />
+
   <div class="card-content">
     <div class="card-text">
       <div style="">

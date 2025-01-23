@@ -1,16 +1,79 @@
 [
     {
         "name": "Sneha Jacob",
-        "image": "officerA.png",
+        "image": "sneha.png",
         "position": "President",
-        "email": "test@email.com",
-        "linkedin": "https://www.linkedin.com"
+        "email": "president@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/snehajac/"
     },
     {
         "name": "Ashish Job",
-        "image": "officerA.png",
+        "image": "ashish.jpeg",
         "position": "Vice President",
-        "email": "test@email.com",
-        "linkedin": "https://www.linkedin.com"
+        "email": "vp.activities@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/ashish-job"
+    },
+    {
+        "name": "Darrell Se",
+        "image": "darrell.jpeg",
+        "position": "Historian",
+        "email": "darrellse2004@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/darrell-se"
+    },
+    {
+        "name": "Diana Nguyen",
+        "image": "diana.png",
+        "position": "Historian ",
+        "email": "diananguyen0424@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/diananguyens?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+    },
+    {
+        "name": "Sami Hamdalla",
+        "image": "sami.jpeg",
+        "position": "Corporate Relations",
+        "email": "corporate.relations@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/sami-hamdalla/"
+    },
+    {
+        "name": "Sage Turner",
+        "image": "sage.png",
+        "position": "Events Chair",
+        "email": "socials@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/sageturn01/"
+    },
+    {
+        "name": "Trevor Topolski",
+        "image": "trevor.jpeg",
+        "position": "Events Chair",
+        "email": "workshops@cougarcs.com",
+        "linkedin": "https://linkedin.com/in/trevortopolski"
+    },
+    {
+        "name": "Akash Nelson",
+        "image": "akash.jpeg",
+        "position": "Operations",
+        "email": "operations@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/akash-nelson"
+    },
+    {
+        "name": "Isaias Gonzalez",
+        "image": "isaias.jpg",
+        "position": "VP Marketing",
+        "email": "xisaiasgonzalez@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/isaiasegonzalez/"
+    },
+    {
+        "name": "Yahya Ozay",
+        "image": "yahya.png",
+        "position": "Designer",
+        "email": "yahyaozay1905@gmail.com",
+        "linkedin": "https://www.linkedin.com/in/yahyaozay"
+    },
+    {
+        "name": "Christian Ohanaja",
+        "image": "cj.png",
+        "position": "Webmaster",
+        "email": "webmaster@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/chrisoh431"
     }
 ]

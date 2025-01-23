@@ -15,7 +15,7 @@ import CougarCSLogo from "../../Navbar/CougarCSLogo.astro";
       <a href="/#branches">Branches</a>
       <a href="/#sponsors">Sponsors</a>
       <a href="/#partners">Partners</a>
-      <a href="/#contact-us">Contact Us</a>
+      <a href="/contact">Contact Us</a>
     </div>
 
     <div class="socials">
@@ -37,122 +37,127 @@ import CougarCSLogo from "../../Navbar/CougarCSLogo.astro";
     </div>
   </div>
 
-  <img src="/footer-pattern.png" class="footer-pattern" />
-</div>
+  <div class="footer-pattern"></div>
 
-<style>
-  .footer {
-    background-color: var(--cougarcs-neutral-grey);
-    color: white;
+  <style>
+    .footer {
+      background-color: var(--cougarcs-neutral-grey);
+      color: white;
 
-    .footer-content {
-      padding: 1.5rem;
-
-      display: grid;
-
-      grid-template-columns: 1fr;
-      grid-template-rows: repeat(3, auto);
-      gap: 0.5rem;
-      align-items: center;
-
-      font-size: 0.9rem;
-      text-align: center;
-
-      .logo {
-        display: none;
-      }
-
-      .socials {
+      .footer-content {
         padding: 1.5rem;
 
-        display: flex;
-        justify-content: center;
-        gap: 1rem;
+        display: grid;
 
-        a {
-          color: white;
-          text-decoration: none;
-          transition: color 0.3s ease;
-        }
-
-        a:hover,
-        a:focus {
-          color: var(--cougarcs-cougar-red);
-        }
-
-        svg {
-          fill: white;
-          width: 2rem;
-          height: 2rem;
-        }
-      }
-
-      .links {
-        margin: 0 auto;
-
-        width: 90%;
-
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(3, auto);
+        gap: 0.5rem;
         align-items: center;
-        justify-content: center;
-        gap: 2rem;
 
-        a {
-          color: white;
-          text-decoration: none;
-          white-space: nowrap;
-        }
-      }
-
-      @media (min-width: 1024px) {
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        padding: 1.5rem 8rem;
+        font-size: 0.9rem;
+        text-align: center;
 
         .logo {
-          display: block;
+          display: none;
         }
 
         .socials {
-          justify-content: flex-start;
-          gap: 2rem;
-          padding: 1.5rem 0;
+          padding: 1.5rem;
+
+          display: flex;
+          justify-content: center;
+          gap: 1rem;
+
+          a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+          }
+
+          a:hover,
+          a:focus {
+            color: var(--cougarcs-cougar-red);
+          }
 
           svg {
             fill: white;
-            width: 1.5rem;
-            height: 1.5rem;
+            width: 2rem;
+            height: 2rem;
           }
         }
 
-        .copyright {
-          text-align: right;
-        }
-
         .links {
-          width: 100%;
+          margin: 0 auto;
 
+          width: 90%;
+
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
           gap: 2rem;
 
-          justify-content: flex-end;
-          flex-wrap: nowrap;
+          a {
+            color: white;
+            text-decoration: none;
+            white-space: nowrap;
+          }
+        }
+
+        @media (min-width: 1024px) {
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          padding: 1.5rem 8rem;
+
+          .logo {
+            display: block;
+          }
+
+          .socials {
+            justify-content: flex-start;
+            gap: 2rem;
+            padding: 1.5rem 0;
+
+            svg {
+              fill: white;
+              width: 1.5rem;
+              height: 1.5rem;
+            }
+          }
+
+          .copyright {
+            text-align: right;
+          }
+
+          .links {
+            width: 100%;
+
+            gap: 2rem;
+
+            justify-content: flex-end;
+            flex-wrap: nowrap;
+          }
+        }
+      }
+
+      /* color pattern, shown only on mobile */
+      .footer-pattern {
+        margin-top: 1rem;
+        display: block;
+        width: 100%;
+        height: 100px;
+
+        background-image: url("/footer-pattern.png");
+        background-size: cover;
+        background-repeat: space;
+        background-position: center;
+
+        /* hide on med screns/desktop */
+        @media (min-width: 425px) {
+          display: none;
         }
       }
     }
-
-    /* color pattern, shown only on mobile */
-    .footer-pattern {
-      display: block;
-      width: 100%;
-      height: 100px;
-      object-fit: cover;
-
-      /* hide on med screns/desktop */
-      @media (min-width: 768px) {
-        display: none;
-      }
-    }
-  }
-</style>
+  </style>
+</div>

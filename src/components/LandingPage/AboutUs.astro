@@ -1,16 +1,17 @@
 ---
+import { Image } from "astro:assets";
 import { Icon } from "astro-icon/components";
 import SectionIconHeading from "./SectionIconHeading.astro";
 ---
 
 <div class="about-us" id="about-us">
-  <img
-    class="about-us-image"
-    src="/about-us-image.png"
-    srcset="/about-us-image-small.png 600w, /about-us-image.png 1200w"
-    sizes="(max-width: 600px) 600px, 1200px"
-    alt="A collage of people collaborating, attending presentations, and socializing, framed with colorful borders and geometric shapes."
-  />
+  <picture class="about-us-image">
+    <source srcset="/about-us-image-small.png" media="(max-width: 767px)" />
+    <img
+      src="/about-us-image.png"
+      alt="A collage of people collaborating, attending presentations, and socializing, framed with colorful borders and geometric shapes."
+    />
+  </picture>
 
   <div>
     <div class="about-us-header">
@@ -40,9 +41,13 @@ import SectionIconHeading from "./SectionIconHeading.astro";
     background-color: var(--cougarcs-light-grey);
 
     .about-us-image {
-      width: 80%;
+      width: 100%;
       height: auto;
       margin: 0 auto;
+
+      @media screen and (min-width: 768px) {
+        width: 90%;
+      }
     }
 
     .about-us-header {

@@ -49,13 +49,26 @@ import JoinForm from "../components/Join/JoinForm.astro";
 
 <style>
   .join-header {
-    padding: 2rem;
+    padding: 2rem 3rem;
+
     color: white;
     background-color: var(--cougarcs-neutral-grey);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.05) 1px,
+        var(--cougarcs-neutral-grey) 1px
+      );
+    background-size: 20px 20px;
+
     font-family: "Chakra Petch", sans-serif;
     font-size: 1.25rem;
 
     text-align: center;
+
+    @media screen and (min-width: 769px) {
+      text-align: left;
+    }
   }
 
   .join-explainer {

@@ -12,29 +12,32 @@ interface Props {
   };
 }
 
-const { name, position, linkedin, email } = Astro.props.officer;
+const { name, position, image, linkedin, email } = Astro.props.officer;
 ---
 
 <div class="officer">
   <div class="officer-image-container">
     <Image
-      src="/officers/officerA.png"
+      src=`/officers/${image}`
       alt={`A photo of ${name}`}
       width={720}
       height={720}
       class={"officer-image"}
+      loading={"eager"}
     />
   </div>
 
   <div class="officer-info">
-    <h3>{name}</h3>
-    <p>{position}</p>
+    <div>
+      <h3>{name}</h3>
+      <p>{position}</p>
+    </div>
 
     <div class="links">
       <a href={linkedin} target="_blank" rel="noopener noreferrer">
         <Icon name="mdi:linkedin" />
       </a>
-      <a href="mailto:{email}">
+      <a href={"mailto:" + email}>
         <Icon name="mdi:email" />
       </a>
     </div>
@@ -58,7 +61,7 @@ const { name, position, linkedin, email } = Astro.props.officer;
       .officer-image {
         width: 100%;
         height: 100%;
-        max-width: 65%;
+        max-width: 80%;
 
         margin: 0 auto;
         object-fit: cover;
@@ -69,6 +72,11 @@ const { name, position, linkedin, email } = Astro.props.officer;
     }
 
     .officer-info {
+      display: flex;
+      flex-grow: 1;
+
+      flex-direction: column;
+      justify-content: space-between;
       padding: 1rem 1rem;
       color: var(--cougarcs-neutral-grey);
 
