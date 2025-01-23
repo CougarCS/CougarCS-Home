@@ -8,6 +8,7 @@ type BranchesCardProps = {
     description: string;
     color: string;
     colorSecondary: string;
+    extlink: string;
     children?: React.ReactNode;
 };
 export default function BranchesCard(props: BranchesCardProps)
@@ -23,7 +24,7 @@ export default function BranchesCard(props: BranchesCardProps)
                 {props.children}
             </ul>
 
-            <a>Learn more about {props.branchTitle ? props.branchTitle : props.title}</a>
+            <a href={props.extlink}>Learn more about {props.branchTitle ? props.branchTitle : props.title}</a>
         </div>
     );
 };

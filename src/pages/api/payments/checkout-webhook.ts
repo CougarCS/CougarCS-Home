@@ -50,14 +50,17 @@ export const POST: APIRoute = async ({ request }) =>
 
             if (!legacyResponse.ok)
             {
-                throw new Error(`Legacy API request failed: ${legacyResponse.statusText}`);
+                return new Response(JSON.stringify({ error: `Legacy API request failed: ${legacyResponse.statusText}` }), { status: 500 });
             }
+
+            return new Response(JSON.stringify({ received: true }), { status: 200 });
         }
 
-        return new Response(JSON.stringify({ received: true }), { status: 200 });
     } catch (err)
     {
         console.error('Error handling webhook event:', err);
         return new Response(`Webhook handler failed: ${err}`, { status: 400 });
     }
+
+    return new Response('Unhandled event type', { status: 500 });
 };

@@ -21,7 +21,7 @@ export default function BranchesTabber()
 {
     return (
         <div className={branchesTabber.tabber}>
-            <BranchesCard title='Info. Sec' description='Info. Sec. is a branch dedicated to equipping members with the knowledge and skills to protect themselves in the digital world.' color='#05ACF6' colorSecondary='blue'>
+            <BranchesCard title='Info. Sec' description='Info. Sec. is a branch dedicated to equipping members with the knowledge and skills to protect themselves in the digital world.' color='#05ACF6' colorSecondary='blue' extlink="https://discord.com/invite/wdxqgErhKF">
                 <BranchesCardActivity icon={<MdOutlinedFlag />} color="#05A8F0">
                     Capture The Flag (CTF's)
                 </BranchesCardActivity>
@@ -35,7 +35,7 @@ export default function BranchesTabber()
                 </BranchesCardActivity>
             </BranchesCard>
 
-            <BranchesCard title='Tutoring' description='The Tutoring branch is here to provide free peer-to-peer tutoring for all students, offering services for a wide range of courses.' color='#10C054' colorSecondary='blue'>
+            <BranchesCard title='Tutoring' description='The Tutoring branch is here to provide free peer-to-peer tutoring for all students, offering services for a wide range of courses.' color='#10C054' colorSecondary='green' extlink="https://discord.gg/38h4yD8bWr">
                 <BranchesCardActivity icon={<RiGraduationCapLine />} color="#10C054">
                     In-Person & Virtual Support
                 </BranchesCardActivity>
@@ -49,7 +49,7 @@ export default function BranchesTabber()
                 </BranchesCardActivity>
             </BranchesCard>
 
-            <BranchesCard title='Web Dev. Committee' branchTitle="Web Dev" description='The Web Dev. Committee is a branch fully-focused on developing experiences to help the club out, one line of code at a time.' color='#6F4FEB' colorSecondary='blue'>
+            <BranchesCard title='Web Dev. Committee' branchTitle="Web Dev" description='The Web Dev. Committee is a branch fully-focused on developing experiences to help the club out, one line of code at a time.' color='#6F4FEB' colorSecondary='violet' extlink="https://discord.gg/WKT4SkyQHb">
                 <BranchesCardActivity icon={<SiCodemagic />} color='#6F4FEB'>
                     CougarCS.com
                 </BranchesCardActivity>
