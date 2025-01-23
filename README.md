@@ -51,3 +51,6 @@ We use [Astro](https://astro.build/) as our framework so the code is close to we
 
 6. Your terminal should tell you the URL the dev site is active on.
    > this should be http://localhost:4321/
+
+
+We use a couple of APIs, namely Stripe, Sendgrid and our legacy backend. If you wish to develop features locally and need these keys, reach out to webmaster@cougarcs.com!

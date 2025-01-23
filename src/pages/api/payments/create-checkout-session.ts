@@ -59,6 +59,7 @@ export const POST: APIRoute = async ({ params, request, url, redirect }) =>
         phone_number_collection: {
             enabled: true,
         },
+        allow_promotion_codes: true,
         mode: 'payment',
         success_url: `${url.origin}/join/success?session_id={CHECKOUT_SESSION_ID}`,
         cancel_url: `${url.origin}/join`
