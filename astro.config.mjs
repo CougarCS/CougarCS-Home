@@ -11,7 +11,7 @@ import cloudflare from '@astrojs/cloudflare';
 // astro-icon for (get this) icons
 
 export default defineConfig({
-    site: 'https://dev.cougarcs.com/',
+    site: 'https://cougarcs.com/',
     output: 'server',
     integrations: [sitemap(), icon(), react()],
     adapter: cloudflare(),
