@@ -11,8 +11,13 @@ import cloudflare from '@astrojs/cloudflare';
 // astro-icon for (get this) icons
 
 export default defineConfig({
-  site: 'https://dev.cougarcs.com/',
-  output: 'server',
-  integrations: [sitemap(), icon(), react()],
-  adapter: cloudflare()
+    site: 'https://dev.cougarcs.com/',
+    output: 'server',
+    integrations: [sitemap(), icon(), react()],
+    adapter: cloudflare(),
+    vite: {
+        define: {
+            "process.env": process.env
+        }
+    }
 });
