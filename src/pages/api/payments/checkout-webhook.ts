@@ -19,7 +19,7 @@ export const POST: APIRoute = async ({ request }) =>
             throw new Error('Stripe signature or endpoint secret is missing!');
         }
 
-        event = stripe.webhooks.constructEvent(rawBody, signature, endpointSecret);
+        event = await stripe.webhooks.constructEventAsync(rawBody, signature, endpointSecret);
     } catch (err)
     {
         console.error('Error verifying Stripe webhook signature:', err);
