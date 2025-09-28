@@ -1,79 +1,135 @@
 [
     {
-        "name": "Sneha Jacob",
-        "image": "sneha.png",
+        "name": "Adrian Armenta",
+        "image": "Adrian.png",
         "position": "President",
         "email": "president@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/snehajac/"
+        "linkedin": "https://www.linkedin.com/in/adrian-armenta/"
     },
     {
-        "name": "Ashish Job",
-        "image": "ashish.jpeg",
+        "name": "Sterling Gore",
+        "image": "Sterling.png",
         "position": "Vice President",
         "email": "vp.activities@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/ashish-job"
+        "linkedin": "https://www.linkedin.com/in/sterlinggore/"
+    },
+    {
+        "name": "Alexa Soto",
+        "image": "AlexaSoto.jpg",
+        "position": "VP Marketing",
+        "email": "marketing@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/alexasoto-tech/"
     },
     {
         "name": "Darrell Se",
-        "image": "darrell.jpeg",
-        "position": "Historian",
-        "email": "darrellse2004@gmail.com",
+        "image": "Darrell.png",
+        "position": "VP Administration",
+        "email": "administration@cougarcs.com",
         "linkedin": "https://www.linkedin.com/in/darrell-se"
     },
     {
-        "name": "Diana Nguyen",
-        "image": "diana.png",
-        "position": "Historian ",
-        "email": "diananguyen0424@gmail.com",
-        "linkedin": "https://www.linkedin.com/in/diananguyens?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+        "name": "Ross Rezvani",
+        "image": "Ross.png",
+        "position": "VP Finance",
+        "email": "finances@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/submit/"
     },
     {
-        "name": "Sami Hamdalla",
-        "image": "sami.jpeg",
-        "position": "Corporate Relations",
-        "email": "corporate.relations@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/sami-hamdalla/"
-    },
-    {
-        "name": "Sage Turner",
-        "image": "sage.png",
-        "position": "Events Chair",
-        "email": "socials@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/sageturn01/"
-    },
-    {
-        "name": "Trevor Topolski",
-        "image": "trevor.jpeg",
-        "position": "Events Chair",
-        "email": "workshops@cougarcs.com",
-        "linkedin": "https://linkedin.com/in/trevortopolski"
-    },
-    {
-        "name": "Akash Nelson",
-        "image": "akash.jpeg",
-        "position": "Operations",
-        "email": "operations@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/akash-nelson"
-    },
-    {
-        "name": "Isaias Gonzalez",
-        "image": "isaias.jpg",
-        "position": "VP Marketing",
-        "email": "xisaiasgonzalez@gmail.com",
-        "linkedin": "https://www.linkedin.com/in/isaiasegonzalez/"
-    },
-    {
-        "name": "Yahya Ozay",
-        "image": "yahya.png",
-        "position": "Designer",
-        "email": "yahyaozay1905@gmail.com",
-        "linkedin": "https://www.linkedin.com/in/yahyaozay"
+        "name": "Hitarth Thanki",
+        "image": "Hitarth.png",
+        "position": "CodeRed Director",
+        "email": "hitarth@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/hitarth-thanki/"
     },
     {
         "name": "Christian Ohanaja",
-        "image": "cj.png",
+        "image": "CJ.jpg",
         "position": "Webmaster",
         "email": "webmaster@cougarcs.com",
         "linkedin": "https://www.linkedin.com/in/chrisoh431"
+    },
+    {
+        "name": "Nesochi Emeghara",
+        "image": "Neso.jpg",
+        "position": "Information Security Director",
+        "email": "infosec@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/nesochi-e/"
+    },
+    {
+        "name": "Onyekachukwu (Franklin) Muoghalu",
+        "image": "Franklin.jpg",
+        "position": "Tutoring Director",
+        "email": "tutoring@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/-franklin/"
+    },
+    {
+        "name": "Ramsey Chandoklow",
+        "image": "Ramsey.jpg",
+        "position": "Corporate Relations",
+        "email": "corporate.relations@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/ramseycha/"
+    },
+    {
+        "name": "Luisangel Esparza",
+        "image": "Luisangel.jpg",
+        "position": "Corporate Relations",
+        "email": "corporate.relations@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/luisangele/"
+    },
+    {
+        "name": "Ali Husain",
+        "image": "Ali.jpg",
+        "position": "Events Chair",
+        "email": "socials@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/ali-n-husain/"
+    },
+    {
+        "name": "Trevor Topolski",
+        "image": "Trevor.jpg",
+        "position": "Events Chair",
+        "email": "socials@cougarcs.com",
+        "linkedin": "https://linkedin.com/in/trevortopolski"
+    },
+    {
+        "name": "Diogo Miranda",
+        "image": "Dio.jpg",
+        "position": "Operations",
+        "email": "operations@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/diogojmiranda/"
+    },
+    {
+        "name": "Kenner Hill",
+        "image": "Kenner.jpg",
+        "position": "Designer",
+        "email": "designer@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/kenner-hill-653646307/"
+    },
+    {
+        "name": "Yahya Ozay",
+        "image": "Yahya.jpg",
+        "position": "Designer",
+        "email": "designer@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/yahyaozay"
+    },
+    {
+        "name": "Murtaza Tayabali",
+        "image": "Murtaza.png",
+        "position": "Designer",
+        "email": "designer@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/murtaza-tayabali-bali/"
+    },
+    {
+        "name": "Bella Chan",
+        "image": "Bella.jpg",
+        "position": "Historian",
+        "email": "historian2@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/bellachan/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    },
+    {
+        "name": "Harris Ali",
+        "image": "Harris.jpg",
+        "position": "Historian",
+        "email": "historian@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/harris-ali1/"
     }
 ]
