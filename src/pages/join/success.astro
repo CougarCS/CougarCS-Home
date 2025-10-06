@@ -6,18 +6,18 @@ const stripe = new Stripe(import.meta.env.STRIPE_SECRET_KEY);
 
 const sessionId = Astro.url.searchParams.get("session_id") || "";
 
-const legacyResponse = await fetch(
-  `${import.meta.env.COUGARCS_LEGACY_API}/api/payment/sessionRegister`,
-  {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify({
-      sessionId: sessionId,
-    }),
-  }
-);
+// const legacyResponse = await fetch(
+//   `${import.meta.env.COUGARCS_LEGACY_API}/api/payment/sessionRegister`,
+//   {
+//     method: "POST",
+//     headers: {
+//       "Content-Type": "application/json",
+//     },
+//     body: JSON.stringify({
+//       sessionId: sessionId,
+//     }),
+//   }
+// );
 
 let checkoutSession;
 if (legacyResponse || sessionId) {
