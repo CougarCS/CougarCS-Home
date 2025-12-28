@@ -1,0 +1,52 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro"
+---
+
+<BaseLayout title="CodeRED 2026 | CougarCS">
+  <main class="codered-container">
+    <section class="content">
+      <h1>CodeRED 2026</h1>
+      <p>The ultimate hackathon experience at the University of Houston.</p>
+      <div class="badge">Coming Soon</div>
+      <a href="/" class="back-home">Return Home</a>
+    </section>
+  </main>
+</BaseLayout>
+
+<style>
+  .codered-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 70vh;
+    color: white;
+    text-align: center;
+  }
+  h1 {
+    font-size: clamp(3rem, 10vw, 5rem);
+    color: var(--cougarcs-cougar-red);
+    margin-bottom: 1rem;
+  }
+  p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    color: black;
+  }
+  .badge {
+    display: inline-block;
+    background: var(--cougarcs-cougar-red);
+    padding: 0.5rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  .back-home {
+    display: block;
+    margin-top: 2rem;
+    color: white;
+    text-decoration: underline;
+  }
+</style>
+---
