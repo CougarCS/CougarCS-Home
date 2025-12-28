@@ -1,8 +1,5 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import OfficerCard from "../components/Contact/OfficerCard.astro";
-
-import officers from "../assets/officers.json";
 
 import ContactForm from "../components/Contact/ContactForm.astro";
 const cougarcsApiEndpoint = import.meta.env.COUGARCS_LEGACY_API;
@@ -105,37 +102,19 @@ if (Astro.request.method === "POST") {
       <br />
 
       <p>
-        Have someone specific in mind? Our officers for the current term are listed in the
-        section below.
+        Have someone specific in mind? Our officers are listed on the
+        <a href="/officers">Officers page</a>.
       </p>
-
-      <hr />
     </div>
 
     <div class="contact-form">
       <ContactForm {errors} />
     </div>
   </div>
-
-  <div class="officers-header">
-    <h2>
-      <span
-        style="text-decoration: underline;
-        text-underline-offset: 0.2rem;
-        text-decoration-color: var(--cougarcs-cougar-red)"
-        >Fall 2025</span
-      > Officer Team
-    </h2>
-  </div>
-
-  <div id="officers" class="officers-listing">
-    {officers.map((officer) => <OfficerCard officer={officer} />)}
-  </div>
 </BaseLayout>
 
 <style>
-  .contact-header,
-  .officers-header {
+  .contact-header {
     padding: 2rem;
 
     color: white;
@@ -164,6 +143,8 @@ if (Astro.request.method === "POST") {
     gap: 2rem;
 
     padding: 2rem 2rem;
+
+    min-height: 70vh;
 
     font-size: 1.1rem;
     color: var(--cougarcs-neutral-grey);
@@ -218,24 +199,4 @@ if (Astro.request.method === "POST") {
     }
   }
 
-  .officers-listing {
-    display: grid;
-    padding: 2rem 2rem;
-    grid-template-columns: 1fr;
-    gap: 1.5rem;
-
-    @media (min-width: 425px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2rem;
-      padding: 3rem 4rem;
-    }
-
-    @media (min-width: 1024px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
 </style>

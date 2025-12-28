@@ -1,0 +1,68 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import OfficerCard from "../components/Contact/OfficerCard.astro";
+import officers from "../assets/officers.json";
+---
+
+<BaseLayout>
+  <div class="officers-header">
+    <h1>
+      <span
+        style="text-decoration: underline;
+        text-underline-offset: 0.2rem;
+        text-decoration-color: var(--cougarcs-cougar-red)"
+        >Fall 2025</span
+      > Officer Team
+    </h1>
+  </div>
+
+  <div id="officers" class="officers-listing">
+    {officers.map((officer) => <OfficerCard officer={officer} />)}
+  </div>
+</BaseLayout>
+
+<style>
+  .officers-header {
+    padding: 2rem;
+
+    color: white;
+    background-color: var(--cougarcs-neutral-grey);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+      linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0.05) 1px,
+        var(--cougarcs-neutral-grey) 1px
+      );
+    background-size: 20px 20px;
+
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 1.25rem;
+
+    text-align: center;
+
+    @media screen and (min-width: 769px) {
+      text-align: left;
+    }
+  }
+
+  .officers-listing {
+    display: grid;
+    padding: 2rem 2rem;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+
+    @media (min-width: 425px) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      padding: 3rem 4rem;
+    }
+
+    @media (min-width: 1024px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+</style>

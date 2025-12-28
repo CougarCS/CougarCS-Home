@@ -24,7 +24,9 @@ import "./cssreset.css";
   <body>
     <Navbar />
 
-    <slot />
+    <main>
+      <slot />
+    </main>
 
     <Footer />
   </body>
@@ -45,6 +47,9 @@ import "./cssreset.css";
   body {
     margin: 0;
     width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
     font-family: "Manrope", "Inter", sans-serif;
   }
 
@@ -52,6 +57,10 @@ import "./cssreset.css";
   *::before,
   *::after {
     font-family: inherit;
+  }
+
+  main {
+    flex: 1;
   }
 
   button,
