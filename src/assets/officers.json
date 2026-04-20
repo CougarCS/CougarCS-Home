@@ -1,135 +1,315 @@
-[
-    {
-        "name": "Ramsey Chandoklow",
-        "image": "Ramsey.png",
-        "position": "President",
-        "email": "president@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/ramseycha/"
-    },
-    {
-        "name": "Ali Husain",
-        "image": "Ali.jpg",
-        "position": "Vice President",
-        "email": "vp.activities@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/ali-n-husain/"
-    },
-    {
-        "name": "Murtaza Tayabali",
-        "image": "Murtaza.png",
-        "position": "VP Marketing",
-        "email": "marketing@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/murtaza-tayabali-bali/"
-    },
-    {
-        "name": "Darrell Se",
-        "image": "Darrell.png",
-        "position": "VP Administration",
-        "email": "administration@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/darrell-se"
-    },
-    {
-        "name": "Diogo Miranda",
-        "image": "Dio.jpg",
-        "position": "VP Finance",
-        "email": "finances@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/diogojmiranda/"
-    },
-    {
-        "name": "Syrus Tolentino",
-        "image": "Syrus.jpg",
-        "position": "CodeRed Director",
-        "email": "",
-        "linkedin": "https://www.linkedin.com/in/syrus-tolentino/"
-    },
-    {
-        "name": "Luisangel Esparza",
-        "image": "Luisangel.jpg",
-        "position": "Webmaster",
-        "email": "webmaster@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/luisangele/"
-    },
-    {
-        "name": "Spencer Ennadi-Johnson",
-        "image": "Spencer.jpg",
-        "position": "Tutoring Director",
-        "email": "tutoring@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/spengjohn/"
-    },
-    {
-        "name": "Nesochi Emeghara",
-        "image": "Neso.jpg",
-        "position": "Information Security Director",
-        "email": "infosec@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/nesochi-e/"
-    },
-    {
-        "name": "Trevor Topolski",
-        "image": "Trevor.jpg",
-        "position": "Corporate Relations",
-        "email": "corporate.relations@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/trevortopolski/"
-    },
-    {
-        "name": "Ricardo Trevizo",
-        "image": "Ricardo.jpg",
-        "position": "Corporate Relations",
-        "email": "corporate.relations@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/rtrevizo18/"
-    },
-    {
-        "name": "Agah Duzenli",
-        "image": "Agah.jpg",
-        "position": "Events Chair",
-        "email": "socials@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/agahduzenli/"
-    },
-    {
-        "name": "Thu Nguyen",
-        "image": "Thu.jpg",
-        "position": "Events Chair",
-        "email": "socials@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/thu-nguyen-htx1902/"
-    },
-    {
-        "name": "Alexis Orellana",
-        "image": "Alexis.jpg",
-        "position": "Operations",
-        "email": "operations@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/alexis-orellana-ao/"
-    },
-    {
-        "name": "Kenner Hill",
-        "image": "Kenner.jpg",
-        "position": "Designer",
-        "email": "designer@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/kenner-hill-653646307/"
-    },
-    {
-        "name": "Jessica Nguyen",
-        "image": "Jessica.png",
-        "position": "Designer",
-        "email": "designer@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/jessicaknguyen04"
-    },
-    {
-        "name": "Henry Nguyen",
-        "image": "Henry.jpg",
-        "position": "Designer",
-        "email": "designer@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/henry-duc/"
-    },
-    {
-        "name": "Ronielle Maranan",
-        "image": "Ronielle.jpg",
-        "position": "Historian",
-        "email": "historian@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/ronielle-maranan-95b28531b/"
-    },
-    {
-        "name": "Cindy Yang",
-        "image": "Cindy.jpg",
-        "position": "Historian",
-        "email": "historian@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/cindyyangcs/"
-    }
-]
+{
+    "Spring 2026" : [ 
+        {
+            "name": "Ramsey Chandoklow",
+            "image": "Ramsey.png",
+            "position": "President",
+            "email": "president@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/ramseycha/"
+        },
+        {
+            "name": "Ali Husain",
+            "image": "Ali.jpg",
+            "position": "Vice President",
+            "email": "vp.activities@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/ali-n-husain/"
+        },
+        {
+            "name": "Murtaza Tayabali",
+            "image": "Murtaza.png",
+            "position": "VP Marketing",
+            "email": "marketing@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/murtaza-tayabali-bali/"
+        },
+        {
+            "name": "Darrell Se",
+            "image": "Darrell.png",
+            "position": "VP Administration",
+            "email": "administration@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/darrell-se"
+        },
+        {
+            "name": "Diogo Miranda",
+            "image": "Dio.jpg",
+            "position": "VP Finance",
+            "email": "finances@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/diogojmiranda/"
+        },
+        {
+            "name": "Syrus Tolentino",
+            "image": "Syrus.jpg",
+            "position": "CodeRed Director",
+            "email": "",
+            "linkedin": "https://www.linkedin.com/in/syrus-tolentino/"
+        },
+        {
+            "name": "Luisangel Esparza",
+            "image": "Luisangel.jpg",
+            "position": "Webmaster",
+            "email": "webmaster@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/luisangele/"
+        },
+        {
+            "name": "Spencer Ennadi-Johnson",
+            "image": "Spencer.jpg",
+            "position": "Tutoring Director",
+            "email": "tutoring@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/spengjohn/"
+        },
+        {
+            "name": "Nesochi Emeghara",
+            "image": "Neso.jpg",
+            "position": "Information Security Director",
+            "email": "infosec@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/nesochi-e/"
+        },
+        {
+            "name": "Trevor Topolski",
+            "image": "Trevor.jpg",
+            "position": "Corporate Relations",
+            "email": "corporate.relations@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/trevortopolski/"
+        },
+        {
+            "name": "Ricardo Trevizo",
+            "image": "Ricardo.jpg",
+            "position": "Corporate Relations",
+            "email": "corporate.relations@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/rtrevizo18/"
+        },
+        {
+            "name": "Agah Duzenli",
+            "image": "Agah.jpg",
+            "position": "Events Chair",
+            "email": "socials@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/agahduzenli/"
+        },
+        {
+            "name": "Thu Nguyen",
+            "image": "Thu.jpg",
+            "position": "Events Chair",
+            "email": "socials@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/thu-nguyen-htx1902/"
+        },
+        {
+            "name": "Alexis Orellana",
+            "image": "Alexis.jpg",
+            "position": "Operations",
+            "email": "operations@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/alexis-orellana-ao/"
+        },
+        {
+            "name": "Kenner Hill",
+            "image": "Kenner.jpg",
+            "position": "Designer",
+            "email": "designer@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/kenner-hill-653646307/"
+        },
+        {
+            "name": "Jessica Nguyen",
+            "image": "Jessica.png",
+            "position": "Designer",
+            "email": "designer@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/jessicaknguyen04"
+        },
+        {
+            "name": "Henry Nguyen",
+            "image": "Henry.jpg",
+            "position": "Designer",
+            "email": "designer@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/henry-duc/"
+        },
+        {
+            "name": "Ronielle Maranan",
+            "image": "Ronielle.jpg",
+            "position": "Historian",
+            "email": "historian@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/ronielle-maranan-95b28531b/"
+        },
+        {
+            "name": "Cindy Yang",
+            "image": "Cindy.jpg",
+            "position": "Historian",
+            "email": "historian@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/cindyyangcs/"
+        }
+    ],
+    "Fall 2025": [
+        {
+            "name": "Adrian Armenta",
+            "image": "Adrian.png",
+            "position": "President",
+            "email": "president@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/adrian-armenta/"
+        },
+        {
+            "name": "Sterling Gore",
+            "image": "Sterling.png",
+            "position": "Vice President",
+            "email": "vp.activities@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/sterlinggore/"
+        },
+        {
+            "name": "Alexa Soto",
+            "image": "AlexaSoto.jpg",
+            "position": "VP Marketing",
+            "email": "marketing@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/alexasoto-tech/"
+        },
+        {
+            "name": "Darrell Se",
+            "image": "Darrell.png",
+            "position": "VP Administration",
+            "email": "administration@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/darrell-se"
+        },
+        {
+            "name": "Ross Rezvani",
+            "image": "Ross.png",
+            "position": "VP Finance",
+            "email": "finances@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/submit/"
+        },
+        {
+            "name": "Hitarth Thanki",
+            "image": "Hitarth.png",
+            "position": "CodeRed Director",
+            "email": "hitarth@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/hitarth-thanki/"
+        },
+        {
+            "name": "Christian Ohanaja",
+            "image": "CJ.jpg",
+            "position": "Webmaster",
+            "email": "webmaster@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/chrisoh431"
+        },
+        {
+            "name": "Nesochi Emeghara",
+            "image": "Neso.jpg",
+            "position": "Information Security Director",
+            "email": "infosec@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/nesochi-e/"
+        },
+        {
+            "name": "Onyekachukwu (Franklin) Muoghalu",
+            "image": "Franklin.jpg",
+            "position": "Tutoring Director",
+            "email": "tutoring@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/-franklin/"
+        },
+        {
+            "name": "Ramsey Chandoklow",
+            "image": "Ramsey.png",
+            "position": "Corporate Relations",
+            "email": "corporate.relations@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/ramseycha/"
+        },
+        {
+            "name": "Luisangel Esparza",
+            "image": "Luisangel.jpg",
+            "position": "Corporate Relations",
+            "email": "corporate.relations@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/luisangele/"
+        },
+        {
+            "name": "Ali Husain",
+            "image": "Ali.jpg",
+            "position": "Events Chair",
+            "email": "socials@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/ali-n-husain/"
+        },
+        {
+            "name": "Trevor Topolski",
+            "image": "Trevor.jpg",
+            "position": "Events Chair",
+            "email": "socials@cougarcs.com",
+            "linkedin": "https://linkedin.com/in/trevortopolski"
+        },
+        {
+            "name": "Diogo Miranda",
+            "image": "Dio.jpg",
+            "position": "Operations",
+            "email": "operations@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/diogojmiranda/"
+        },
+        {
+            "name": "Kenner Hill",
+            "image": "Kenner.jpg",
+            "position": "Designer",
+            "email": "designer@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/kenner-hill-653646307/"
+        },
+        {
+            "name": "Yahya Ozay",
+            "image": "Yahya.jpg",
+            "position": "Designer",
+            "email": "designer@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/yahyaozay"
+        },
+        {
+            "name": "Murtaza Tayabali",
+            "image": "Murtaza.png",
+            "position": "Designer",
+            "email": "designer@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/murtaza-tayabali-bali/"
+        },
+        {
+            "name": "Bella Chan",
+            "image": "Bella.jpg",
+            "position": "Historian",
+            "email": "historian2@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/bellachan/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+        },
+        {
+            "name": "Harris Ali",
+            "image": "Harris.jpg",
+            "position": "Historian",
+            "email": "historian@cougarcs.com",
+            "linkedin": "https://www.linkedin.com/in/harris-ali1/"
+        }
+    ],
+    "Spring 2025" : [],
+    "Fall 2024" : [],
+    "Spring 2024" : [],
+    "Fall 2023" : [],
+    "Spring 2023" : [],
+    "Fall 2022" : [],
+    "Spring 2022" : [],
+    "Fall 2021" : [],
+    "Spring 2021" : [],
+    "Fall 2020" : [],
+    "Spring 2020" : [],
+    "Fall 2019" : [],
+    "Spring 2019" : [],
+    "Fall 2018" : [],
+    "Spring 2018" : [],
+    "Fall 2017" : [],
+    "Spring 2017" : [],
+    "Fall 2016" : [],
+    "Spring 2016" : [],
+    "Fall 2015" : [],
+    "Spring 2015" : [],
+    "Fall 2014" : [],
+    "Spring 2014" : [],
+    "Fall 2013" : [],
+    "Spring 2013" : [],
+    "Fall 2012" : [],
+    "Spring 2012" : [],
+    "Fall 2011" : [],
+    "Spring 2011" : [],
+    "Fall 2010" : [],
+    "Spring 2010" : [],
+    "Fall 2009" : [],
+    "Spring 2009" : [],
+    "Fall 2008" : [],
+    "Spring 2008" : [],
+    "Fall 2007" : [],
+    "Spring 2007" : [],
+    "Fall 2006" : [],
+    "Spring 2006" : [],
+    "Fall 2005" : [],
+    "Spring 2005" : [],
+    "Fall 2004" : [],
+    "Spring 2004" : []
+}

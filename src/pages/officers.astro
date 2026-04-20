@@ -1,25 +1,102 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 import OfficerCard from "../components/Contact/OfficerCard.astro";
-import officers from "../assets/officers.json";
+import officersByTerm from "../assets/officers.json";
+
+const terms = Object.keys(officersByTerm);
+const defaultTerm = terms[0];
 ---
 
 <BaseLayout>
   <div class="officers-header">
-    <h1>
-      <span
-        style="text-decoration: underline;
-        text-underline-offset: 0.2rem;
-        text-decoration-color: var(--cougarcs-cougar-red)"
-        >Spring 2026</span
-      > Officer Team
-    </h1>
+    <div class="header-content">
+      <h1>
+        <span
+          id="term-label"
+          style="text-decoration: underline;
+          text-underline-offset: 0.2rem;
+          text-decoration-color: var(--cougarcs-cougar-red)"
+        >{defaultTerm}</span> Officer Team
+      </h1>
+
+      <div class="term-selector">
+        <label for="term-select">Term:</label>
+        <div class="select-wrapper">
+          <select id="term-select">
+            {terms.map((term) => (
+              <option value={term}>{term}</option>
+            ))}
+          </select>
+          <span class="select-arrow">▾</span>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div id="officers" class="officers-listing">
-    {officers.map((officer) => <OfficerCard officer={officer} />)}
+    {officersByTerm[defaultTerm].map((officer) => (
+      <OfficerCard officer={officer} />
+    ))}
   </div>
 </BaseLayout>
+
+<script id="officers-data" type="application/json" set:html={JSON.stringify(officersByTerm)}></script>
+
+<script>
+  const officersByTerm = JSON.parse(
+    document.getElementById("officers-data")!.textContent!
+  );
+
+  const select = document.getElementById("term-select") as HTMLSelectElement;
+  const listing = document.getElementById("officers")!;
+  const termLabel = document.getElementById("term-label")!;
+
+  const linkedinIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2zm-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.32 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93zM6.88 8.56a1.68 1.68 0 0 0 1.68-1.68c0-.93-.75-1.69-1.68-1.69a1.69 1.69 0 0 0-1.69 1.69c0 .93.76 1.68 1.69 1.68m1.39 9.94v-8.37H5.5v8.37z"/></svg>`;
+  const emailIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2m0 4-8 5-8-5V6l8 5 8-5z"/></svg>`;
+
+  function renderOfficerCard(officer: {
+    name: string;
+    position: string;
+    image: string;
+    email: string;
+    linkedin: string;
+  }) {
+    return `
+      <div class="officer">
+        <div class="officer-image-container">
+          <img
+            src="/officers/${officer.image}"
+            alt="A photo of ${officer.name}"
+            width="720"
+            height="720"
+            class="officer-image"
+            loading="eager"
+          />
+        </div>
+        <div class="officer-info">
+          <div>
+            <h3>${officer.name}</h3>
+            <p>${officer.position}</p>
+          </div>
+          <div class="links">
+            <a href="${officer.linkedin}" target="_blank" rel="noopener noreferrer">
+              ${linkedinIcon}
+            </a>
+            <a href="mailto:${officer.email}">
+              ${emailIcon}
+            </a>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  select.addEventListener("change", () => {
+    const term = select.value;
+    termLabel.textContent = term;
+    listing.innerHTML = officersByTerm[term].map(renderOfficerCard).join("");
+  });
+</script>
 
 <style>
   .officers-header {
@@ -45,6 +122,63 @@ import officers from "../assets/officers.json";
     }
   }
 
+  .header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    @media screen and (min-width: 769px) {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .term-selector {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+  }
+
+  .select-wrapper {
+    position: relative;
+    display: inline-block;
+  }
+
+  .select-wrapper select {
+    appearance: none;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    color: white;
+    cursor: pointer;
+    font-family: "Chakra Petch", sans-serif;
+    font-size: 1rem;
+    padding: 0.4rem 2.2rem 0.4rem 0.8rem;
+    transition: border-color 0.2s;
+
+    &:hover {
+      border-color: var(--cougarcs-cougar-red);
+    }
+
+    option {
+      background-color: var(--cougarcs-neutral-grey);
+      color: white;
+    }
+  }
+
+  .select-arrow {
+    pointer-events: none;
+    position: absolute;
+    right: 0.6rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--cougarcs-cougar-red);
+    font-size: 1.1rem;
+  }
+
   .officers-listing {
     display: grid;
     padding: 2rem 2rem;
@@ -63,6 +197,73 @@ import officers from "../assets/officers.json";
 
     @media (min-width: 1024px) {
       grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  /* Styles for JS-rendered cards (mirror OfficerCard.astro) */
+  #officers :global(.officer) {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background-color: var(--cougarcs-light-grey);
+    border-radius: 0.5rem;
+    border: 1.5px solid var(--cougarcs-grey-border);
+    text-align: center;
+  }
+
+  #officers :global(.officer-image-container) {
+    width: 100%;
+    padding-top: 1.75rem;
+  }
+
+  #officers :global(.officer-image) {
+    width: 100%;
+    height: 100%;
+    max-width: 80%;
+    margin: 0 auto;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 1 / 1;
+    border-radius: 0.25rem;
+    border: 3px solid hsl(200, 27%, 92%);
+  }
+
+  #officers :global(.officer-info) {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    color: var(--cougarcs-neutral-grey);
+  }
+
+  #officers :global(.officer-info h3) {
+    font-size: 1.25rem;
+    font-weight: 900;
+  }
+
+  #officers :global(.links) {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+  #officers :global(.links svg) {
+    width: 2rem;
+    height: 2rem;
+    margin-top: 0.5rem;
+    fill: var(--cougarcs-cougar-red);
+    color: var(--cougarcs-cougar-red);
+  }
+
+  @media screen and (min-width: 768px) {
+    #officers :global(.officer-image) {
+      max-width: 12rem;
+    }
+
+    #officers :global(.officer-info) {
+      padding: 1rem 2rem;
     }
   }
 </style>
