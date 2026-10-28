@@ -1,31 +1,10 @@
 [
     {
-        "name": "Ramsey Chandoklow",
-        "image": "Ramsey.png",
-        "position": "President",
-        "email": "president@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/ramseycha/"
-    },
-    {
         "name": "Ali Husain",
         "image": "Ali.jpg",
-        "position": "Vice President",
-        "email": "vp.activities@cougarcs.com",
+        "position": "President",
+        "email": "president@cougarcs.com",
         "linkedin": "https://www.linkedin.com/in/ali-n-husain/"
-    },
-    {
-        "name": "Syrus Tolentino",
-        "image": "Syrus.jpg",
-        "position": "CodeRed Director",
-        "email": "",
-        "linkedin": "https://www.linkedin.com/in/syrus-tolentino/"
-    },
-    {
-        "name": "Usmaaan Sayed",
-        "image": "Usmaan.jpg",
-        "position": "Webmaster",
-        "email": "webmaster@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/sayedusmaan/"
     },
     {
         "name": "Spencer Ennadi-Johnson",
@@ -35,18 +14,32 @@
         "linkedin": "https://www.linkedin.com/in/spengjohn/"
     },
     {
+        "name": "Henry Nguyen",
+        "image": "Henry.jpg",
+        "position": "VP Marketing",
+        "email": "marketing@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/henry-duc/"
+    },
+    {
+        "name": "Cindy Yang",
+        "image": "Cindy.jpg",
+        "position": "VP Finance",
+        "email": "finances@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/cindyyangcs/"
+    },
+    {
+        "name": "Syrus Tolentino",
+        "image": "Syrus.jpg",
+        "position": "CodeRed Director",
+        "email": "",
+        "linkedin": "https://www.linkedin.com/in/syrus-tolentino/"
+    },
+    {
         "name": "Nesochi Emeghara",
         "image": "Neso.jpg",
         "position": "Information Security Director",
         "email": "infosec@cougarcs.com",
         "linkedin": "https://www.linkedin.com/in/nesochi-e/"
-    },
-    {
-        "name": "Ricardo Trevizo",
-        "image": "Ricardo.jpg",
-        "position": "Corporate Relations",
-        "email": "corporate.relations@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/rtrevizo18/"
     },
     {
         "name": "Thu Nguyen",
@@ -70,18 +63,32 @@
         "linkedin": "https://www.linkedin.com/in/kenner-hill-653646307/"
     },
     {
-        "name": "Justin",
+        "name": "Justin Kondratenko",
         "image": "Justin.jpg",
         "position": "Designer",
         "email": "designer@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/"
+        "linkedin": "https://www.linkedin.com/in/justinkondratenko/"
     },
     {
-        "name": "Henry Nguyen",
-        "image": "Henry.jpg",
-        "position": "VP Marketing",
-        "email": "marketing@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/henry-duc/"
+        "name": "Melih Selek",
+        "image": "Melih.jpg",
+        "position": "Social Media",
+        "email": "socials@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/melih-selek-9aba08371/"
+    },
+    {
+        "name": "Sriram Maramganti",
+        "image": "Sriram.jpg",
+        "position": "Social Media",
+        "email": "socials@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/sriram-maramganti/"
+    },
+    {
+        "name": "Ricardo Trevizo",
+        "image": "Ricardo.jpg",
+        "position": "Corporate Relations",
+        "email": "corporate.relations@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/rtrevizo18/"
     },
     {
         "name": "Ronielle Maranan",
@@ -91,11 +98,18 @@
         "linkedin": "https://www.linkedin.com/in/ronielle-maranan-95b28531b/"
     },
     {
-        "name": "Cindy Yang",
-        "image": "Cindy.jpg",
-        "position": "VP Finance",
-        "email": "finances@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/cindyyangcs/"
+        "name": "Akanimo Eshiet II",
+        "image": "Akanimo.jpg",
+        "position": "Historian",
+        "email": "historian@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/akanimo-eshiet-ii-ba8459247/"
+    },
+    {
+        "name": "Liam Sidor",
+        "image": "Liam.jpg",
+        "position": "Historian",
+        "email": "historian@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/liam-sidor-628226397/"
     },
     {
         "name": "Harris Adnan",
@@ -105,38 +119,17 @@
         "linkedin": "https://www.linkedin.com/in/harris-ali1/"
     },
     {
-        "name": "Melih",
-        "image": "Melih.jpg",
-        "position": "Social Media",
-        "email": "socials@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in//"
-    },
-    {
-        "name": "Jaso Beltran",
+        "name": "Jason Beltran",
         "image": "Jason.jpg",
         "position": "Director of Operations",
         "email": "operations@cougarcs.com",
         "linkedin": "https://www.linkedin.com/in/jbeltran26/"
     },
     {
-        "name": "Akanimo",
-        "image": "Akanimo.jpg",
-        "position": "Historian",
-        "email": "historian@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in//"
-    },
-    {
-        "name": "Liam",
-        "image": "Liam.jpg",
-        "position": "Historian",
-        "email": "historian@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in//"
-    },
-    {
-        "name": "Sriram Maramganti",
-        "image": "Sriram.jpg",
-        "position": "Social Media",
-        "email": "socials@cougarcs.com",
-        "linkedin": "https://www.linkedin.com/in/sriram-maramganti/"
+        "name": "Usmaaan Sayed",
+        "image": "Usmaan.jpg",
+        "position": "Webmaster",
+        "email": "webmaster@cougarcs.com",
+        "linkedin": "https://www.linkedin.com/in/sayedusmaan/"
     }
 ]
